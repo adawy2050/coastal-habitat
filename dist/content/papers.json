@@ -20,7 +20,8 @@
       "topic": "regional",
       "basins": [
         "redsea"
-      ]
+      ],
+      "coverage": []
     },
     {
       "doi": "10.1038/s43247-025-02096-5",
@@ -41,7 +42,8 @@
       "topic": "regional",
       "basins": [
         "redsea"
-      ]
+      ],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41598-025-17669-9",
@@ -60,6 +62,26 @@
       "topic": "regional",
       "basins": [
         "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Arabian Gulf",
+          "bounds": [
+            47,
+            23,
+            57,
+            31
+          ]
+        },
+        {
+          "name": "Gulf of Oman",
+          "bounds": [
+            55.5,
+            22,
+            61,
+            27
+          ]
+        }
       ]
     },
     {
@@ -80,6 +102,17 @@
       "topic": "regional",
       "basins": [
         "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Arabian Gulf",
+          "bounds": [
+            47,
+            23,
+            57,
+            31
+          ]
+        }
       ]
     },
     {
@@ -109,7 +142,8 @@
       "crossrefType": "journal-article",
       "titleAr": "نهج هرمي لتعريف الموجات الحارة البحرية",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41467-018-03732-9",
@@ -138,7 +172,8 @@
       "crossrefType": "journal-article",
       "titleAr": "موجات حارة بحرية أطول وأكثر تكرارًا خلال القرن الماضي",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41558-019-0412-1",
@@ -170,7 +205,8 @@
       "crossrefType": "journal-article",
       "titleAr": "الموجات الحارة البحرية تهدد التنوع الحيوي والخدمات البيئية عالميًا",
       "topic": "habitats",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41467-019-10206-z",
@@ -199,7 +235,8 @@
       "crossrefType": "journal-article",
       "titleAr": "تقييم عالمي للموجات الحارة البحرية ومحركاتها",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41586-018-0383-9",
@@ -216,7 +253,8 @@
       "crossrefType": "journal-article",
       "titleAr": "الموجات الحارة البحرية في ظل الاحترار العالمي",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41467-018-03163-6",
@@ -232,7 +270,8 @@
       "crossrefType": "journal-article",
       "titleAr": "المخاطر الناشئة عن الموجات الحارة البحرية",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.5670/oceanog.2018.205",
@@ -258,7 +297,8 @@
       "crossrefType": "journal-article",
       "titleAr": "تصنيف الموجات الحارة البحرية وتسميتها",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/nature21707",
@@ -318,7 +358,8 @@
       "crossrefType": "journal-article",
       "titleAr": "الاحترار العالمي وتكرار الابيضاض الجماعي للمرجان",
       "topic": "habitats",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41586-018-0041-2",
@@ -348,7 +389,8 @@
       "crossrefType": "journal-article",
       "titleAr": "الاحترار العالمي يغير تجمعات الشعاب المرجانية",
       "topic": "habitats",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41558-018-0096-y",
@@ -376,7 +418,8 @@
       "crossrefType": "journal-article",
       "titleAr": "موجة حارة بحرية تتسبب في فقد كبير من مخزون كربون الأعشاب البحرية",
       "topic": "habitats",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1071/MF16322",
@@ -399,7 +442,8 @@
       "crossrefType": "journal-article",
       "titleAr": "نفوق واسع للمانغروف في خليج كاربنتاريا الأسترالي خلال طقس متطرف",
       "topic": "habitats",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1146/annurev-marine-032720-095144",
@@ -421,7 +465,8 @@
       "crossrefType": "journal-article",
       "titleAr": "الموجات الحارة البحرية: مراجعة علمية",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1016/j.cub.2019.06.077",
@@ -447,7 +492,8 @@
       "crossrefType": "journal-article",
       "titleAr": "التحلل السريع للمرجان المرتبط بالنفوق أثناء الموجات الحارة البحرية",
       "topic": "habitats",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1016/j.rse.2017.07.029",
@@ -464,7 +510,8 @@
       "crossrefType": "journal-article",
       "titleAr": "تحليل متعدد المقاييس وعالي الدقة لحرارة سطح البحر عالميًا",
       "topic": "methods",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41586-022-04573-9",
@@ -487,7 +534,8 @@
       "crossrefType": "journal-article",
       "titleAr": "توقعات موسمية عالمية للموجات الحارة البحرية",
       "topic": "forecast",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1038/s41467-024-49307-9",
@@ -514,7 +562,8 @@
       "crossrefType": "journal-article",
       "titleAr": "الآثار العالمية للموجات الحارة البحرية على الأنواع المؤسسة للموائل الساحلية",
       "topic": "habitats",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "doi": "10.1016/j.rsma.2023.102934",
@@ -536,6 +585,17 @@
       "topic": "regional",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Philippine seas",
+          "bounds": [
+            116,
+            4,
+            129,
+            22
+          ]
+        }
       ]
     },
     {
@@ -554,6 +614,17 @@
       "topic": "regional",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "South China Sea",
+          "bounds": [
+            104,
+            0,
+            122,
+            25
+          ]
+        }
       ]
     },
     {
@@ -573,6 +644,17 @@
       "topic": "regional",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "South China Sea",
+          "bounds": [
+            104,
+            0,
+            122,
+            25
+          ]
+        }
       ]
     },
     {
@@ -597,10 +679,21 @@
       "topic": "regional",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Northern Japan",
+          "bounds": [
+            138,
+            36,
+            151,
+            47
+          ]
+        }
       ]
     },
     {
-      "doi": "10.1029/2025jc023614",
+      "doi": "10.1029/2025JC023614",
       "title": "Marine Heatwaves Have Increased in Frequency, Duration, and Depth Across Southeast Asia",
       "journal": "Journal of Geophysical Research: Oceans",
       "year": 2026,
@@ -610,14 +703,27 @@
         "Benjamin P. Horton",
         "Kyle Morgan"
       ],
-      "url": "https://doi.org/10.1029/2025jc023614",
-      "verified": "2026-10-18",
+      "url": "https://doi.org/10.1029/2025JC023614",
+      "verified": "2026-11-01",
       "crossrefType": "journal-article",
-      "titleAr": "ازدياد تكرار الموجات الحارة البحرية ومدتها وعمقها في جنوب شرق آسيا",
+      "titleAr": "تزايد تكرار الموجات البحرية الحارة ومدتها وعمقها عبر جنوب شرق آسيا",
       "topic": "regional",
       "basins": [
         "eastasia"
-      ]
+      ],
+      "coverage": [
+        {
+          "name": "Southeast Asia and tropical western Pacific",
+          "bounds": [
+            95,
+            -12,
+            145,
+            26
+          ]
+        }
+      ],
+      "published": "2026-04-01",
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
     },
     {
       "doi": "10.3390/rs13193989",
@@ -635,6 +741,17 @@
       "topic": "regional",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Northwestern Pacific",
+          "bounds": [
+            120,
+            20,
+            165,
+            50
+          ]
+        }
       ]
     },
     {
@@ -658,6 +775,17 @@
       "topic": "regional",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Japan and surrounding seas",
+          "bounds": [
+            127,
+            29,
+            151,
+            47
+          ]
+        }
       ]
     },
     {
@@ -682,6 +810,17 @@
       "topic": "habitats",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Japan and surrounding seas",
+          "bounds": [
+            127,
+            29,
+            151,
+            47
+          ]
+        }
       ]
     },
     {
@@ -703,8 +842,523 @@
       "topic": "regional",
       "basins": [
         "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Arabian Gulf",
+          "bounds": [
+            47,
+            23,
+            57,
+            31
+          ]
+        }
       ]
+    },
+    {
+      "doi": "10.1016/j.scitotenv.2025.180463",
+      "title": "Gulf of Aqaba as a thermal refuge: Insights from four years of intensifying marine heatwaves",
+      "titleAr": "خليج العقبة كملاذ حراري: أربع سنوات من الموجات البحرية الحارة المتزايدة",
+      "journal": "Science of The Total Environment",
+      "year": 2025,
+      "published": "2025-10",
+      "url": "https://doi.org/10.1016/j.scitotenv.2025.180463",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Na'ama-Rose Kochman",
+        "Maoz Fine"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Gulf of Aqaba",
+          "bounds": [
+            34,
+            27.4,
+            35.6,
+            30
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1016/j.wace.2025.100771",
+      "title": "Subsurface marine heat waves and coral bleaching in the southern red sea linked to remote forcing",
+      "titleAr": "الموجات البحرية الحارة تحت السطح وابيضاض المرجان في جنوب البحر الأحمر",
+      "journal": "Weather and Climate Extremes",
+      "year": 2025,
+      "published": "2025-06",
+      "url": "https://doi.org/10.1016/j.wace.2025.100771",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Jithendra Raju Nadimpalli",
+        "Sivareddy Sanikommu",
+        "Aneesh C. Subramanian",
+        "Donata Giglio",
+        "Ibrahim Hoteit"
+      ],
+      "topic": "regional",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Southern Red Sea and Bab el Mandeb",
+          "bounds": [
+            38,
+            12,
+            44.5,
+            20
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.21608/ejabf.2025.451010",
+      "title": "Thermal Resilience of Corals in the Southern Egyptian Red Sea Reefs",
+      "titleAr": "المرونة الحرارية للمرجان في شعاب جنوب البحر الأحمر المصرية",
+      "journal": "Egyptian Journal of Aquatic Biology and Fisheries",
+      "year": 2025,
+      "published": "2025-09-01",
+      "url": "https://doi.org/10.21608/ejabf.2025.451010",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Ismail et al."
+      ],
+      "topic": "habitats",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Southern Egyptian Red Sea",
+          "bounds": [
+            34,
+            22,
+            36.8,
+            26
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.3390/environments12070248",
+      "title": "Using Tourist Diver Photos to Assess the Effects of Marine Heatwaves on Central Red Sea Coral Reefs",
+      "titleAr": "صور الغواصين لتقييم آثار الموجات الحارة على شعاب وسط البحر الأحمر",
+      "journal": "Environments",
+      "year": 2025,
+      "published": "2025-07-18",
+      "url": "https://doi.org/10.3390/environments12070248",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Anderson B. Mayfield"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Southern Egyptian Red Sea",
+          "bounds": [
+            34,
+            22,
+            36.8,
+            26
+          ]
+        },
+        {
+          "name": "Central Red Sea",
+          "bounds": [
+            34.5,
+            20,
+            40.8,
+            25.8
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1016/j.scitotenv.2025.179073",
+      "title": "Extreme marine heatwave linked to mass fish kill in the Red Sea",
+      "titleAr": "موجة بحرية حارة شديدة مرتبطة بنفوق جماعي للأسماك في البحر الأحمر",
+      "journal": "Science of The Total Environment",
+      "year": 2025,
+      "published": "2025-05",
+      "url": "https://doi.org/10.1016/j.scitotenv.2025.179073",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Matthew D. Tietbohl",
+        "Lily G.C. Genevier",
+        "Erik C. Krieger",
+        "Alexander Kattan",
+        "Yixin Wang",
+        "Elamurugu Alias Gokul",
+        "Lucia M. Rodriguez Bravo",
+        "Lea Palm",
+        "Gage Mele",
+        "Ibrahim Hoteit",
+        "Maggie D. Johnson"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Central Red Sea",
+          "bounds": [
+            34.5,
+            20,
+            40.8,
+            25.8
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.3390/su18147456",
+      "title": "Toward Sustainable Marine Governance in the Egyptian Red Sea: A Multi-Decadal Integration of Climate-Driven and Anthropogenic Pressures on Coral Reef Resilience",
+      "titleAr": "حوكمة البحر الأحمر المصري ومرونة الشعاب تحت الضغوط المناخية والبشرية",
+      "journal": "Sustainability",
+      "year": 2026,
+      "published": "2026-07-21",
+      "url": "https://doi.org/10.3390/su18147456",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Hesham El-Asmar",
+        "Mahmoud Felfla",
+        "Eslam Ahmed",
+        "Mohamed Gamal",
+        "Gehan Elbayomi",
+        "Samah Abo Zeid"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Egyptian Red Sea coast",
+          "bounds": [
+            32,
+            22,
+            36.8,
+            28.2
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1016/j.marenvres.2025.107522",
+      "title": "Unprecedented high-temperature triggers a rapid shift in ecological characteristics of phytoplankton succession in the southern coastal waters of Korea",
+      "titleAr": "تغير تعاقب العوالق النباتية خلال الحرارة البحرية الشديدة على ساحل كوريا الجنوبي",
+      "journal": "Marine Environmental Research",
+      "year": 2025,
+      "published": "2025-11",
+      "url": "https://doi.org/10.1016/j.marenvres.2025.107522",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Minji Lee",
+        "Myung-Jin Hyun",
+        "Joon-Yong Yang",
+        "Yoonja Kang"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Jeju Island and southern Korea",
+          "bounds": [
+            125,
+            32,
+            130,
+            36
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1126/sciadv.adz4647",
+      "title": "Trans-basin linkages prolong Northwestern Pacific marine heatwaves through a circumglobal wave pattern",
+      "titleAr": "روابط بين الأحواض تطيل الموجات البحرية الحارة في شمال غرب المحيط الهادئ",
+      "journal": "Science Advances",
+      "year": 2026,
+      "published": "2026-07-03",
+      "url": "https://doi.org/10.1126/sciadv.adz4647",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Yu Zhao",
+        "Jin-Yi Yu"
+      ],
+      "topic": "methods",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Northwestern Pacific",
+          "bounds": [
+            120,
+            20,
+            165,
+            50
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1029/2025JC023755",
+      "title": "Marine Heatwave Persistence Drives Phytoplankton Miniaturization and Productivity Decline in the South China Sea",
+      "titleAr": "استمرار الموجات البحرية الحارة يغير العوالق والإنتاجية في بحر الصين الجنوبي",
+      "journal": "Journal of Geophysical Research: Oceans",
+      "year": 2026,
+      "published": "2026-07-09",
+      "url": "https://doi.org/10.1029/2025JC023755",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Jun Zhao",
+        "Wenbo He",
+        "Xueyuan Huang",
+        "Zhimin Bai",
+        "Huajian Zheng",
+        "Xinyan Li",
+        "Haiju Hu",
+        "Lin Deng"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "South China Sea",
+          "bounds": [
+            104,
+            0,
+            122,
+            25
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.3390/d18100618",
+      "title": "Depth- and Taxon-Specific Coral Bleaching of High-Latitude Marginal Coral Communities at Jeju Island During the 4th Global Coral Bleaching Event",
+      "titleAr": "اختلاف ابيضاض المرجان حسب العمق والنوع في جزيرة جيجو خلال الحدث العالمي الرابع",
+      "journal": "Diversity",
+      "year": 2026,
+      "published": "2026-10-12",
+      "url": "https://doi.org/10.3390/d18100618",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Taihun Kim",
+        "Anna B. Jöst",
+        "Sun Kyeong Choi",
+        "Jaeseok Chung",
+        "Jaehyun Kim",
+        "Garance Perrois",
+        "Leonard Pons",
+        "Taeho H. Kim",
+        "Han Jun Kim",
+        "Byeongsu Song",
+        "Kihwan Lee",
+        "Seonggil Go",
+        "Kyungman Kwon",
+        "Young Baek Son"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Jeju Island and southern Korea",
+          "bounds": [
+            125,
+            32,
+            130,
+            36
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.3390/rs17061048",
+      "title": "Spatiotemporal Dynamics of Marine Heatwaves and Ocean Acidification Affecting Coral Environments in the Philippines",
+      "titleAr": "الموجات البحرية الحارة وتحمض المحيط في بيئات المرجان بالفلبين",
+      "journal": "Remote Sensing",
+      "year": 2025,
+      "published": "2025-03-17",
+      "url": "https://doi.org/10.3390/rs17061048",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Rose Angeli Tabanao Macagga",
+        "Po-Chun Hsu"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Philippine seas",
+          "bounds": [
+            116,
+            4,
+            129,
+            22
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1038/s41598-026-43302-4",
+      "title": "Health status and distribution of scleractinian corals around three islands in the south of Iran",
+      "titleAr": "حالة المرجان وتوزيعه حول ثلاث جزر في جنوب إيران",
+      "journal": "Scientific Reports",
+      "year": 2026,
+      "published": "2026-04-24",
+      "url": "https://doi.org/10.1038/s41598-026-43302-4",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Majid Askari Hesni",
+        "Mehdi Bolouki Kourandeh",
+        "Somayeh Zangiabadi",
+        "Michel Claereboudt",
+        "Naser Pourvali",
+        "Mohammad Sadegh-Saba",
+        "Ali Reza Rastgoo",
+        "Mohammad Sharif Ranjbar"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Southern Iranian islands",
+          "bounds": [
+            49,
+            26,
+            57,
+            30
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1007/s00338-026-02922-y",
+      "title": "Increased disease prevalence in a warming peripheral reef setting (Abu Dhabi, Persian/Arabian Gulf)",
+      "titleAr": "زيادة الأمراض في شعاب أبوظبي مع ارتفاع حرارة الخليج",
+      "journal": "Coral Reefs",
+      "year": 2026,
+      "published": "2026-07-15",
+      "url": "https://doi.org/10.1007/s00338-026-02922-y",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Bernhard Riegl",
+        "Andrew G. Bauman",
+        "John A. Burt",
+        "Mike McWilliam",
+        "Morgan S. Pratchett"
+      ],
+      "topic": "habitats",
+      "basins": [
+        "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Abu Dhabi coast",
+          "bounds": [
+            51.2,
+            23,
+            54.9,
+            25.4
+          ]
+        }
+      ],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1038/s41467-026-78279-1",
+      "title": "Marine heat waves in vulnerable coral reef regions are skillfully predictable on multi-year timescales",
+      "titleAr": "إمكان توقع الموجات البحرية الحارة في مناطق الشعاب على مدى عدة سنوات",
+      "journal": "Nature Communications",
+      "year": 2026,
+      "published": "2026-10-27",
+      "url": "https://doi.org/10.1038/s41467-026-78279-1",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Alexia Karwat",
+        "June-Yi Lee",
+        "Christian L. E. Franzke",
+        "Yong-Yub Kim",
+        "Eun Young Kwon",
+        "Sun-Seon Lee"
+      ],
+      "topic": "forecast",
+      "basins": [],
+      "coverage": [],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
+    },
+    {
+      "doi": "10.1029/2026EF008642",
+      "title": "Imminent Emergence of Permanent Surface Marine Heatwave States Across Global Oceans",
+      "titleAr": "ظهور حالات الموجات البحرية الحارة الدائمة عبر المحيطات العالمية",
+      "journal": "Earth's Future",
+      "year": 2026,
+      "published": "2026-10-28",
+      "url": "https://doi.org/10.1029/2026EF008642",
+      "verified": "2026-11-01",
+      "crossrefType": "journal-article",
+      "authors": [
+        "Najmus Sadat Khan",
+        "Hamza Ibn Mujib",
+        "Zahid Imtiaz",
+        "A. K. M Saiful Islam",
+        "Thomas L. Frölicher",
+        "Robert Wilson",
+        "Juliane Wihsgott",
+        "Mohammad Kamruzzaman"
+      ],
+      "topic": "methods",
+      "basins": [],
+      "coverage": [],
+      "geographySource": "Named study area in the publisher title/abstract; bounds are a search area, not sampled sites."
     }
   ],
-  "areaFiltering": "Regional items follow the map selection. Global references remain in the editable catalogue."
+  "areaFiltering": "Regional items follow the map selection. Global references remain in the editable catalogue.",
+  "geographyChecked": "2026-11-01"
 }

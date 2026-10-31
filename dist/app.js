@@ -1,10 +1,10 @@
 /* Red Sea Habitat Heatwave Atlas. All scientific arrays are fetched locally. */
 (() => {
   'use strict';
-  const RELEASE='20261023-october-r2';
+  const RELEASE='20261101-light-coasts-r1';
   const $ = id => document.getElementById(id), S = window.AtlasStats;
   const labels = {Nino34: 'Niño-3.4', IOD: 'IOD', NAO: 'NAO', AO: 'AO', EAWR: 'EAWR', NAtl_SSTA: 'N. Atlantic SST', PDO: 'PDO',localSst:'Annual SST (OISST)'};
-  const modeColors = {Nino34:'#c43d32', IOD:'#007d8a', NAO:'#7e52a0', AO:'#366aa2', EAWR:'#99700d', NAtl_SSTA:'#b52a74', PDO:'#39813c',localSst:'#7c660d'};
+  const modeColors = {Nino34:'#9b5844', IOD:'#3b7772', NAO:'#7b6b85', AO:'#4e708f', EAWR:'#958044', NAtl_SSTA:'#9b6f7b', PDO:'#73855c',localSst:'#6b7661'};
   const metricInfo = {
     mhw_days: {name:'Heatwave days', unit:'days', axis:'Heatwave days / year', max:200, digits:0},
     mhw_frequency: {name:'Event frequency', unit:'events', axis:'Events / year', max:12, digits:1},
@@ -118,7 +118,7 @@
       }
     });
     pixelLayer=new HabitatLayer().addTo(map);
-    selectedMarker=L.circleMarker([0,0],{radius:7,color:'#fff3ca',weight:2,fillColor:'#ffd09c',fillOpacity:.2,interactive:false}).addTo(map);
+    selectedMarker=L.circleMarker([0,0],{radius:7,className:'selected-habitat-marker',color:'#315f69',weight:2.3,fillColor:'#e5f2ec',fillOpacity:.4,interactive:false}).addTo(map);
     sourceMarker=L.circleMarker([0,0],{radius:3,color:'#b4d2c2',weight:1,fillOpacity:.6,interactive:false}).addTo(map);
     sourceLine=L.polyline([],{color:'#afd4c2',weight:1,dashArray:'3,4',interactive:false}).addTo(map);
     map.on('click',e=>{
@@ -306,7 +306,7 @@
       const context=outlook.targets.filter(t=>t.available&&t.product===productInfo.name&&t.basin===pointBasin(point).id&&habitats.includes(t.habitat)&&(t.scope==='overall'||t.region===meta.regions[point[3]]));
       await window.AtlasReports.create({pixel:pixelId(pixel),latitude:point[1],longitude:point[0],habitats,region:meta.regions[point[3]],product:productInfo,
         source:productInfo.cells[sourceIndex(pixel,product)],distance:point[product==='mur'?6:7],metric,metricInfo:metricInfo[metric],histories,forecast,validation,seasonal,context,
-        association,scenarios:window.AtlasScenarios?.compute(),detail:await window.AtlasDetails?.load(pixel,product),observed2026:await window.AtlasObserved2026?.forPoint(pixel,product),externalForecasts:await window.AtlasExternalForecasts?.data(),dailyClimate:await window.AtlasDetails?.climate(),updated:outlook.asOf,liveClimate,webUrl:`https://adawy2050.github.io/redsea-habitat-mhw-atlas/?lat=${point[1]}&lon=${point[0]}&product=${product}`});
+        association,localSources:await window.AtlasResources?.forPoint(pixel),scenarios:window.AtlasScenarios?.compute(),detail:await window.AtlasDetails?.load(pixel,product),observed2026:await window.AtlasObserved2026?.forPoint(pixel,product),externalForecasts:await window.AtlasExternalForecasts?.data(),dailyClimate:await window.AtlasDetails?.climate(),updated:outlook.asOf,liveClimate,webUrl:`https://adawy2050.github.io/redsea-habitat-mhw-atlas/?lat=${point[1]}&lon=${point[0]}&product=${product}`});
       note('Point report downloaded.');
     }catch(error){console.error(error);note(`Report could not be created: ${error.message}`);}
     finally{button.disabled=false;button.textContent='Create point report (PDF) ';}

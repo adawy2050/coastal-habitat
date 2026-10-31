@@ -11,7 +11,8 @@
       "summaryAr": "تستعرض النشرة الأصلية حالة مناخ المحيط الهادئ والاحتمالات الموسمية.",
       "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml",
       "checked": "2026-10-22",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "id": "el-nino-2026",
@@ -22,7 +23,8 @@
       "summary": "A dated update on the tropical Pacific climate state.",
       "summaryAr": "تحديث مؤرخ عن الحالة المناخية في المحيط الهادئ الاستوائي.",
       "url": "https://www.noaa.gov/news-release/el-nino-forms-expected-to-strengthen-say-noaa-forecasters",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "id": "bleaching-2026",
@@ -33,7 +35,8 @@
       "summary": "NOAA reviews the extent and timing of the global bleaching event.",
       "summaryAr": "تراجع NOAA امتداد حدث الابيضاض العالمي وتوقيته.",
       "url": "https://www.nesdis.noaa.gov/news/worlds-fourth-mass-coral-bleaching-event-likely-ended-2025",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "id": "wmo-2025",
@@ -44,7 +47,8 @@
       "summary": "The annual assessment covers temperature, ocean heat and other climate indicators.",
       "summaryAr": "يشمل التقييم السنوي الحرارة ومحتوى المحيط الحراري ومؤشرات مناخية أخرى.",
       "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "id": "nasa-2024",
@@ -55,7 +59,8 @@
       "summary": "A global temperature assessment using land and sea surface observations.",
       "summaryAr": "تقييم عالمي لدرجة الحرارة باستخدام رصد اليابسة وسطح البحر.",
       "url": "https://www.nasa.gov/news-release/temperatures-rising-nasa-confirms-2024-warmest-year-on-record/",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "id": "forecasts-2022",
@@ -66,7 +71,8 @@
       "summary": "Research on producing heatwave forecasts from existing climate forecast systems.",
       "summaryAr": "بحث عن إنتاج توقعات الموجات الحارة باستخدام نظم التنبؤ المناخي القائمة.",
       "url": "https://psl.noaa.gov/news/2022/042122b.html",
-      "basins": []
+      "basins": [],
+      "coverage": []
     },
     {
       "id": "jamstec-eastasia-heat-2023",
@@ -80,6 +86,26 @@
       "checked": "2026-10-18",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Northern Japan",
+          "bounds": [
+            138,
+            36,
+            151,
+            47
+          ]
+        },
+        {
+          "name": "Japan and surrounding seas",
+          "bounds": [
+            127,
+            29,
+            151,
+            47
+          ]
+        }
       ]
     },
     {
@@ -94,6 +120,17 @@
       "checked": "2026-10-18",
       "basins": [
         "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Kuroshio and Kuroshio Extension",
+          "bounds": [
+            128,
+            28,
+            155,
+            40
+          ]
+        }
       ]
     },
     {
@@ -108,7 +145,18 @@
       "summary": "A field study examined live and inactivated bacterial treatments during a central Red Sea heatwave.",
       "summaryAr": "اختبرت دراسة ميدانية بكتيريا حية ومعطلة خلال موجة حارة في وسط البحر الأحمر.",
       "url": "https://www.kaust.edu.sa/en/news/microbial-therapies-improve-heat-stressed-coral-health",
-      "checked": "2026-10-22"
+      "checked": "2026-10-22",
+      "coverage": [
+        {
+          "name": "Central Red Sea",
+          "bounds": [
+            34.5,
+            20,
+            40.8,
+            25.8
+          ]
+        }
+      ]
     },
     {
       "id": "kaust-reefs-2026",
@@ -122,7 +170,18 @@
       "summary": "KAUST reviews field research on coral heat tolerance and reef restoration.",
       "summaryAr": "تستعرض كاوست دراسات ميدانية لتحمل المرجان للحرارة واستعادة الشعاب.",
       "url": "https://discovery.kaust.edu.sa/en/article/26756/buying-time-for-coral-reefs/",
-      "checked": "2026-10-22"
+      "checked": "2026-10-22",
+      "coverage": [
+        {
+          "name": "Central Red Sea",
+          "bounds": [
+            34.5,
+            20,
+            40.8,
+            25.8
+          ]
+        }
+      ]
     },
     {
       "id": "nyuad-stress-2026",
@@ -136,7 +195,27 @@
       "summary": "Researchers tested corals on both UAE coasts to compare their response to extreme heat.",
       "summaryAr": "اختبر الباحثون المرجان على ساحلي الإمارات لمقارنة استجابته للحرارة الشديدة.",
       "url": "https://nyuad.nyu.edu/en/news/latest-news/science-and-technology/2026/january/nyuad-researchers-conduct-testing-identify-heat-resistant-corals.html",
-      "checked": "2026-10-22"
+      "checked": "2026-10-22",
+      "coverage": [
+        {
+          "name": "UAE coast",
+          "bounds": [
+            51,
+            23,
+            56.6,
+            26.5
+          ]
+        },
+        {
+          "name": "Gulf of Oman",
+          "bounds": [
+            55.5,
+            22,
+            61,
+            27
+          ]
+        }
+      ]
     },
     {
       "id": "gulf-drivers-2025",
@@ -150,7 +229,18 @@
       "summary": "A published study examines the circulation and climate patterns linked to extreme Gulf sea temperatures.",
       "summaryAr": "تفحص دراسة منشورة الدوران وأنماط المناخ المرتبطة بحرارة البحر الشديدة في الخليج.",
       "url": "https://os.copernicus.org/articles/21/3241/2025/",
-      "checked": "2026-10-22"
+      "checked": "2026-10-22",
+      "coverage": [
+        {
+          "name": "Arabian Gulf",
+          "bounds": [
+            47,
+            23,
+            57,
+            31
+          ]
+        }
+      ]
     },
     {
       "id": "japan-variability-2026",
@@ -164,7 +254,18 @@
       "summary": "Researchers examined four decades of heatwaves and their links to North Pacific temperature patterns.",
       "summaryAr": "درس الباحثون أربعة عقود من الموجات الحارة وصلتها بأنماط حرارة شمال المحيط الهادئ.",
       "url": "https://www.cmes.ehime-u.ac.jp/newsen/marine-heatwaves-around-japan-the-role-of-global-warming-and-oceanic-variability/",
-      "checked": "2026-10-22"
+      "checked": "2026-10-22",
+      "coverage": [
+        {
+          "name": "Japan and surrounding seas",
+          "bounds": [
+            127,
+            29,
+            151,
+            47
+          ]
+        }
+      ]
     },
     {
       "id": "japan-bleaching-2026",
@@ -178,8 +279,357 @@
       "summary": "A study documents the response of Japanese coral communities to the record marine heat of 2024.",
       "summaryAr": "توثق دراسة استجابة تجمعات المرجان اليابانية لحرارة البحر القياسية في 2024.",
       "url": "https://www.nature.com/articles/s41598-026-65095-2",
-      "checked": "2026-10-22"
+      "checked": "2026-10-22",
+      "coverage": [
+        {
+          "name": "Japan and surrounding seas",
+          "bounds": [
+            127,
+            29,
+            151,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyuad-bacteria-20261027",
+      "date": "2026-10-27",
+      "source": "NYU Abu Dhabi",
+      "title": "Coral-associated bacteria help Gulf corals withstand heat",
+      "titleAr": "بكتيريا مرتبطة بالمرجان تساعد مرجان الخليج على تحمل الحرارة",
+      "summary": "Researchers studying Arabian Gulf corals, including colonies near Saadiyat Island, report a bacterial contribution to the coral heat-stress response.",
+      "summaryAr": "تتناول دراسة لمرجان الخليج، بما فيه مستعمرات قرب جزيرة السعديات، دور البكتيريا في استجابة المرجان للإجهاد الحراري.",
+      "url": "https://nyuad.nyu.edu/en/news/latest-news/science-and-technology/2026/october/nyuad-study-coral-bacteria-heat.html",
+      "basins": [
+        "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Abu Dhabi coast",
+          "bounds": [
+            51.2,
+            23,
+            54.9,
+            25.4
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "nyuad-drivers-20251229",
+      "date": "2025-12-29",
+      "source": "NYU Abu Dhabi",
+      "title": "Wind patterns behind extreme summer heat in the Gulf",
+      "titleAr": "أنماط الرياح وراء حرارة الصيف الشديدة في الخليج",
+      "summary": "A Gulf study examines how weaker Shamal winds and a stronger summer monsoon contribute to unusually warm summers.",
+      "summaryAr": "تبحث دراسة للخليج دور ضعف رياح الشمال واشتداد الرياح الموسمية الصيفية في ارتفاع حرارة البحر.",
+      "url": "https://nyuad.nyu.edu/en/news/latest-news/science-and-technology/2025/december/nyuad-scientists-identify-heatwave-trigger.html",
+      "basins": [
+        "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Arabian Gulf",
+          "bounds": [
+            47,
+            23,
+            57,
+            31
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-j.scitotenv.2025.180463",
+      "date": "2025-10",
+      "source": "Science of The Total Environment",
+      "kind": "Research update",
+      "title": "Gulf of Aqaba corals examined through four warm summers",
+      "titleAr": "دراسة مرجان خليج العقبة خلال أربعة أصياف حارة",
+      "summary": "A study follows coral responses through successive marine heatwaves in the Gulf of Aqaba.",
+      "summaryAr": "تتابع دراسة استجابة المرجان للموجات البحرية الحارة المتعاقبة في خليج العقبة.",
+      "url": "https://doi.org/10.1016/j.scitotenv.2025.180463",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Gulf of Aqaba",
+          "bounds": [
+            34,
+            27.4,
+            35.6,
+            30
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-j.wace.2025.100771",
+      "date": "2025-06",
+      "source": "Weather and Climate Extremes",
+      "kind": "Research update",
+      "title": "Subsurface heat and bleaching in the southern Red Sea",
+      "titleAr": "الحرارة تحت السطح وابيضاض المرجان في جنوب البحر الأحمر",
+      "summary": "A regional ocean study examines subsurface warming and remote forcing during southern Red Sea bleaching events.",
+      "summaryAr": "تبحث دراسة محيطية إقليمية الاحترار تحت السطح والتأثيرات البعيدة خلال ابيضاض المرجان في جنوب البحر الأحمر.",
+      "url": "https://doi.org/10.1016/j.wace.2025.100771",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Southern Red Sea and Bab el Mandeb",
+          "bounds": [
+            38,
+            12,
+            44.5,
+            20
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-ejabf.2025.451010",
+      "date": "2025-09-01",
+      "source": "Egyptian Journal of Aquatic Biology and Fisheries",
+      "kind": "Research update",
+      "title": "Coral recovery after bleaching on the Egyptian Red Sea coast",
+      "titleAr": "تعافي المرجان بعد الابيضاض على الساحل المصري للبحر الأحمر",
+      "summary": "Field assessments examine coral recovery and mortality after the 2023 bleaching event in southern Egyptian reefs.",
+      "summaryAr": "تبحث مسوحات ميدانية التعافي والنفوق بعد ابيضاض 2023 في الشعاب المصرية الجنوبية.",
+      "url": "https://doi.org/10.21608/ejabf.2025.451010",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Southern Egyptian Red Sea",
+          "bounds": [
+            34,
+            22,
+            36.8,
+            26
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-sciadv.adz4647",
+      "date": "2026-07-03",
+      "source": "Science Advances",
+      "kind": "Research update",
+      "title": "Why northwestern Pacific heatwaves can persist",
+      "titleAr": "لماذا قد تستمر الموجات الحارة في شمال غرب المحيط الهادئ",
+      "summary": "A study examines cross-basin atmospheric links associated with persistent northwestern Pacific marine heatwaves.",
+      "summaryAr": "تبحث دراسة روابط جوية بين الأحواض ترتبط باستمرار الموجات البحرية الحارة في شمال غرب المحيط الهادئ.",
+      "url": "https://doi.org/10.1126/sciadv.adz4647",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Northwestern Pacific",
+          "bounds": [
+            120,
+            20,
+            165,
+            50
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-2025JC023755",
+      "date": "2026-07-09",
+      "source": "Journal of Geophysical Research: Oceans",
+      "kind": "Research update",
+      "title": "Persistent heatwaves and plankton changes in the South China Sea",
+      "titleAr": "استمرار الموجات الحارة وتغير العوالق في بحر الصين الجنوبي",
+      "summary": "A new study examines the links between heatwave duration, phytoplankton size and marine productivity.",
+      "summaryAr": "تبحث دراسة الروابط بين مدة الموجات الحارة وحجم العوالق النباتية والإنتاجية البحرية.",
+      "url": "https://doi.org/10.1029/2025JC023755",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "South China Sea",
+          "bounds": [
+            104,
+            0,
+            122,
+            25
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-d18100618",
+      "date": "2026-10-12",
+      "source": "Diversity",
+      "kind": "Research update",
+      "title": "Jeju coral bleaching differs between depths and taxa",
+      "titleAr": "اختلاف ابيضاض مرجان جيجو باختلاف العمق والنوع",
+      "summary": "Observations document differing coral bleaching responses during the 2024 heatwave around Jeju Island.",
+      "summaryAr": "توثق رصدات اختلاف استجابة المرجان للابيضاض خلال موجة 2024 قرب جزيرة جيجو.",
+      "url": "https://doi.org/10.3390/d18100618",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Jeju Island and southern Korea",
+          "bounds": [
+            125,
+            32,
+            130,
+            36
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-rs17061048",
+      "date": "2025-03-17",
+      "source": "Remote Sensing",
+      "kind": "Research update",
+      "title": "Thermal stress and acidification in Philippine coral environments",
+      "titleAr": "الإجهاد الحراري والتحمض في بيئات المرجان بالفلبين",
+      "summary": "Satellite and reanalysis records are used to examine heatwaves and acidification affecting Philippine coral environments.",
+      "summaryAr": "تُستخدم بيانات الأقمار الصناعية وإعادة التحليل لدراسة الموجات الحارة والتحمض في بيئات المرجان بالفلبين.",
+      "url": "https://doi.org/10.3390/rs17061048",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Philippine seas",
+          "bounds": [
+            116,
+            4,
+            129,
+            22
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-s41598-026-43302-4",
+      "date": "2026-04-24",
+      "source": "Scientific Reports",
+      "kind": "Research update",
+      "title": "A survey of corals around southern Iranian islands",
+      "titleAr": "مسح للمرجان حول جزر جنوب إيران",
+      "summary": "A regional study reports coral health and distribution around three islands in the southern Iranian Gulf.",
+      "summaryAr": "تتناول دراسة إقليمية صحة المرجان وتوزيعه حول ثلاث جزر قبالة جنوب إيران.",
+      "url": "https://doi.org/10.1038/s41598-026-43302-4",
+      "basins": [
+        "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Southern Iranian islands",
+          "bounds": [
+            49,
+            26,
+            57,
+            30
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-s00338-026-02922-y",
+      "date": "2026-07-15",
+      "source": "Coral Reefs",
+      "kind": "Research update",
+      "title": "Heat stress and coral disease on Abu Dhabi reefs",
+      "titleAr": "الإجهاد الحراري وأمراض المرجان في شعاب أبوظبي",
+      "summary": "Long-term observations examine coral disease following marked summer heat stress and bleaching.",
+      "summaryAr": "تبحث رصدات طويلة الأجل أمراض المرجان بعد الإجهاد الحراري الصيفي والابيضاض.",
+      "url": "https://doi.org/10.1007/s00338-026-02922-y",
+      "basins": [
+        "gulf"
+      ],
+      "coverage": [
+        {
+          "name": "Abu Dhabi coast",
+          "bounds": [
+            51.2,
+            23,
+            54.9,
+            25.4
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-su18147456",
+      "date": "2026-07-21",
+      "source": "Sustainability",
+      "kind": "Research update",
+      "title": "Egyptian Red Sea reefs under climate and coastal pressures",
+      "titleAr": "الشعاب المصرية تحت الضغوط المناخية والساحلية",
+      "summary": "A multi-decadal study examines warming and human pressures on reef condition along the Egyptian Red Sea coast.",
+      "summaryAr": "تبحث دراسة متعددة العقود الاحترار والضغوط البشرية على حالة الشعاب على الساحل المصري للبحر الأحمر.",
+      "url": "https://doi.org/10.3390/su18147456",
+      "basins": [
+        "redsea"
+      ],
+      "coverage": [
+        {
+          "name": "Egyptian Red Sea coast",
+          "bounds": [
+            32,
+            22,
+            36.8,
+            28.2
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "id": "research-2025JC023614",
+      "date": "2026-04-01",
+      "source": "Journal of Geophysical Research: Oceans",
+      "kind": "Research update",
+      "title": "Heatwaves deepen and lengthen across Southeast Asia",
+      "titleAr": "امتداد الموجات الحارة إلى أعماق ومدد أكبر عبر جنوب شرق آسيا",
+      "summary": "A regional study examines the frequency, duration and vertical structure of marine heatwaves across Southeast Asia and the tropical western Pacific.",
+      "summaryAr": "تبحث دراسة إقليمية تكرار الموجات البحرية الحارة ومدتها وبنيتها الرأسية عبر جنوب شرق آسيا وغرب المحيط الهادئ المداري.",
+      "url": "https://doi.org/10.1029/2025JC023614",
+      "basins": [
+        "eastasia"
+      ],
+      "coverage": [
+        {
+          "name": "Southeast Asia and tropical western Pacific",
+          "bounds": [
+            95,
+            -12,
+            145,
+            26
+          ]
+        }
+      ],
+      "checked": "2026-11-01"
     }
   ],
-  "areaFiltering": "Regional items follow the map selection. Global references remain in the editable catalogue."
+  "areaFiltering": "Regional items follow the map selection. Global references remain in the editable catalogue.",
+  "geographyChecked": "2026-11-01",
+  "refreshed": "2026-11-01"
 }

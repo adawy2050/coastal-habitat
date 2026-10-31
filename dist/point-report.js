@@ -11,7 +11,7 @@
     await loadDependencies();
     const {jsPDF}=window.jspdf,doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4',compress:true});
     const ink=[23,33,46],blue=[23,79,134],grey=[85,101,117],W=180,X=15;
-    const title=(name,sub)=>{doc.setFont('helvetica','bold');doc.setFontSize(17);doc.setTextColor(...ink);doc.text(ascii(name),X,21);doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(...grey);doc.text(doc.splitTextToSize(ascii(sub),W),X,28);};
+    const title=(name,sub)=>{doc.setFont('helvetica','normal');doc.setFontSize(6.5);doc.setTextColor(...grey);doc.text('RESEARCH PREVIEW - UNDER TESTING',195,10,{align:'right'});doc.setFont('helvetica','bold');doc.setFontSize(17);doc.setTextColor(...ink);doc.text(ascii(name),X,21);doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(...grey);doc.text(doc.splitTextToSize(ascii(sub),W),X,28);};
     const heading=(name,y)=>{doc.setFont('helvetica','bold');doc.setFontSize(11);doc.setTextColor(...ink);doc.text(ascii(name),X,y);doc.setFont('helvetica','normal');return y+7;};
     const para=(text,y,size=8.5)=>{doc.setFontSize(size);doc.setTextColor(...grey);const lines=doc.splitTextToSize(ascii(text),W);doc.text(lines,X,y);return y+lines.length*(size*.42)+4;};
     const table=(head,body,y,extra={})=>{doc.autoTable({head:[head.map(ascii)],body:body.map(row=>row.map(ascii)),startY:y,margin:{left:X,right:X,bottom:19},theme:'striped',styles:{fontSize:8,cellPadding:2,overflow:'linebreak',textColor:ink},headStyles:{fillColor:blue,textColor:255,fontStyle:'bold'},alternateRowStyles:{fillColor:[243,246,249]},...extra});return doc.lastAutoTable.finalY+8;};
@@ -90,7 +90,7 @@
     }
     if(r.liveClimate){
       doc.addPage();title('Climate observations and conditional annual extension',`${coordinate} | Monthly feeds checked ${r.liveClimate.asOf}`);y=40;
-      const monthly=r.liveClimate.monthly,start=String(+r.liveClimate.asOf.slice(0,4)-4),keep=monthly.dates.map((date,i)=>date>=start?i:-1).filter(i=>i>=0),colours=['#c43d32','#007d8a','#7e52a0','#366aa2','#99700d','#b52a74','#39813c'];
+      const monthly=r.liveClimate.monthly,start=String(+r.liveClimate.asOf.slice(0,4)-4),keep=monthly.dates.map((date,i)=>date>=start?i:-1).filter(i=>i>=0),colours=['#9b5844','#3b7772','#7b6b85','#4e708f','#958044','#9b6f7b','#73855c'];
       const ct=r.liveClimate.modes.map((m,j)=>({x:keep.map(i=>monthly.dates[i]),y:window.AtlasStats.standardize(keep.map(i=>monthly.values[m][i])),name:m,mode:'lines',line:{color:colours[j],width:1.4}}));
       if(r.dailyClimate)for(const mode of ['AO','NAO']){const source=r.dailyClimate.modes[mode],indices=source.dates.map((date,i)=>date>=start?i:-1).filter(i=>i>=0),raw=keep.map(i=>monthly.values[mode][i]).filter(Number.isFinite),mean=window.AtlasStats.mean(raw),sd=Math.sqrt(window.AtlasStats.mean(raw.map(v=>(v-mean)**2)));ct.push({x:indices.map(i=>source.dates[i]),y:indices.map(i=>(source.values[i]-mean)/(sd||1)),name:mode+' daily',mode:'lines',line:{color:mode==='AO'?'rgba(54,106,162,.20)':'rgba(126,82,160,.20)',width:.7}});}
       const cimage=await extraChart(ct,{xaxis:{type:'date'},yaxis:{title:'Standard deviations'}});doc.addImage(cimage,'PNG',X,y,W,68);y+=75;
@@ -121,7 +121,21 @@
       if(r.forecast?.external){const f=r.forecast,a=f.external;y=para(`Cell outlook: ${pct(f.probability)}; observed-index reference: ${pct(a.reference_probability)}; issued-ENSO model weight: ${pct(a.selected_weight)}. ${f.nTest} earlier test seasons after baseline availability. All forecast-input and blend choices use earlier data. Eight test seasons and a lower past Brier score are required to add the forecast. IOD is displayed but is not yet a cell-model input.`,y,8);}
       y=para('Sources: https://forecast.ccsr.columbia.edu/forecasts/enso/plumes ; https://www.jamstec.go.jp/aplinfo/sintexf/e/seasonal/data_download.html',y,7);
     }
-    const pages=doc.getNumberOfPages();for(let page=1;page<=pages;page++){doc.setPage(page);doc.setDrawColor(215,222,230);doc.line(X,282,195,282);doc.setFont('helvetica','normal');doc.setFontSize(7);doc.setTextColor(...grey);doc.text('Coastal Habitat Heatwave Atlas | Ahmed Eladawy',X,287);doc.text(`${page} / ${pages}`,195,287,{align:'right'});}
+    if(r.localSources){
+      const local=r.localSources;doc.addPage();title('Selected coast: photograph and sources',`${coordinate} | ${local.area} | Catalogue updated ${local.checked}`);y=42;
+      const nearest=window.AtlasPhotos?.forPoint(r.latitude,r.longitude,1,local.basin,r.habitats.reduce((sum,h)=>sum+({coral:1,seagrass:2,mangrove:4,kelp_macroalgae:8}[h]||0),0))[0];
+      if(nearest){
+        try{const p=nearest.photo,img=new Image();img.src=AtlasPhotos.previewUrl(p,960);await img.decode();const canvas=document.createElement('canvas');canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;canvas.getContext('2d').drawImage(img,0,0);const h=Math.min(76,W*img.naturalHeight/img.naturalWidth),w=h*img.naturalWidth/img.naturalHeight;doc.addImage(canvas.toDataURL('image/jpeg',.90),'JPEG',X+(W-w)/2,y,w,h);y+=h+6;y=para(`${p.location}; ${num(nearest.distance,0)} km from the selected habitat cell. Collection photograph, separate from the SST record. ${p.author}; ${p.license}.`,y,7);doc.setFontSize(7);doc.textWithLink('Photograph source and licence',X,y,{url:p.source});y+=10;}catch{y=para('The collection photograph could not be loaded; source links remain available below.',y,8);}
+      }
+      for(const [label,items] of [['News and research updates',local.news.slice(0,2)],['Papers for this area',local.papers.slice(0,2)]]){
+        if(y>232){doc.addPage();title('Sources for the selected coast',coordinate);y=42;}
+        y=heading(label,y);
+        if(!items.length)y=para('No geographically matched items are in this catalogue yet.',y,8);
+        for(const item of items){if(y>239){doc.addPage();title('Sources for the selected coast',coordinate);y=42;}y=para(item.title,y,8);y=para(`${item.source||item.journal} | ${item.date||item.published||item.year} | ${item.geography?.name||local.area}`,y,7);doc.setTextColor(...blue);doc.setFontSize(7);doc.textWithLink('Read at source',X,y,{url:item.url});y+=9;}
+      }
+      if(y<252){y=para('Source geography describes a study area, not a measurement at this habitat pixel.',y,7);doc.textWithLink('More sources for this point in the atlas',X,y,{url:r.webUrl});}
+    }
+    const pages=doc.getNumberOfPages();for(let page=1;page<=pages;page++){doc.setPage(page);doc.setDrawColor(215,222,230);doc.line(X,282,195,282);doc.setFont('helvetica','normal');doc.setFontSize(7);doc.setTextColor(...grey);doc.text('Coastal Habitat Heatwave Atlas | Ahmed Eladawy',X,287);doc.text(`${page} / ${pages}`,195,287,{align:'right'});doc.setFontSize(6.5);doc.text('Research preview - Under testing | Comments: ahmed.eladawy@jamstec.go.jp',X,292);}
     doc.setProperties({title:`MHW point report: ${coordinate}`,author:'Ahmed Eladawy',subject:'Habitat-cell history, seasonal probabilities and chronological validation'});
     doc.save(`MHW_${r.latitude.toFixed(2)}N_${r.longitude.toFixed(2)}E_${r.product.name.replaceAll(' ','_')}_report.pdf`);
     }finally{window.AtlasReportRendering=false;window.dispatchEvent(new Event('atlasreportcomplete'));}

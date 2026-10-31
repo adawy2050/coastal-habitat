@@ -11,8 +11,8 @@ import argparse
 import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]/'dist'
-SCRIPTS=['i18n.js','ui-strings.js','gallery.js','stats.js','app.js','point-report.js','tour.js','detail.js','exploration.js','scenarios.js','organisation.js','resources.js','identity.js','world.js','scientific.js','point-window.js','shoreline.js','observed2026.js','map-layers.js','external-forecasts.js','point-timeline.js']
-STYLES=['styles.css','atlas.css','point.css','portal.css','upgrade.css','world.css','scientific.css','point-window.css']
+SCRIPTS=['i18n.js','ui-strings.js','gallery.js','stats.js','app.js','point-report.js','tour.js','detail.js','exploration.js','scenarios.js','organisation.js','resources.js','identity.js','world.js','scientific.js','point-window.js','shoreline.js','observed2026.js','map-layers.js','external-forecasts.js','point-timeline.js','refresh.js']
+STYLES=['styles.css','atlas.css','point.css','portal.css','upgrade.css','world.css','scientific.css','point-window.css','refresh.css']
 
 
 def write_utf8(path, text):
