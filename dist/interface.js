@@ -20,7 +20,7 @@
   function pause(){clearInterval(timer);timer=null;$('photoPlay').textContent='Play slideshow';}
   $('photoPrev').onclick=()=>{page--;render();};$('photoNext').onclick=()=>{page++;render();};$('photoBasin').onchange=()=>{autoPhotoArea=false;page=0;render();};$('photoPlay').onclick=()=>{if(timer){pause();return;}timer=setInterval(()=>{if(!document.hidden&&!dialog.open){page++;render();}},6500);$('photoPlay').textContent='Pause slideshow';};document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});window.addEventListener('atlasmotionchange',()=>{if(document.documentElement.dataset.motion==='off')pause();});
   window.addEventListener('atlaspixelchange',e=>updatePixel(e.detail));window.addEventListener('atlaslanguagechange',()=>{render();updatePixel();if(dialog.open)open(active);});
-  fetch('./images/credits.json?v=20261101-combinations-r2').then(r=>{if(!r.ok)throw Error('Photo catalogue unavailable');return r.json();}).then(data=>{photos=data;render();const p=window.AtlasDebug?.pixels?.[AtlasDebug.state.pixel];if(p)lastPoint={basin:AtlasDebug.meta.basins.find(b=>b.regions.includes(p[3])).id,habitats:p[2],latitude:p[1],longitude:p[0]};updatePixel();window.dispatchEvent(new Event('atlasphotosready'));});
+  fetch('./images/credits.json?v=20261101-final-coverage-r1').then(r=>{if(!r.ok)throw Error('Photo catalogue unavailable');return r.json();}).then(data=>{photos=data;render();const p=window.AtlasDebug?.pixels?.[AtlasDebug.state.pixel];if(p)lastPoint={basin:AtlasDebug.meta.basins.find(b=>b.regions.includes(p[3])).id,habitats:p[2],latitude:p[1],longitude:p[0]};updatePixel();window.dispatchEvent(new Event('atlasphotosready'));});
   window.AtlasPhotos={open,picture,previewUrl,credit,nearest,forPoint,get photos(){return photos;}};
 })();
 
@@ -116,7 +116,7 @@
 /* Red Sea Habitat Heatwave Atlas. All scientific arrays are fetched locally. */
 (() => {
   'use strict';
-  const RELEASE='20261101-combinations-r2';
+  const RELEASE='20261101-final-coverage-r1';
   const $ = id => document.getElementById(id), S = window.AtlasStats;
   const labels = {Nino34: 'Niño-3.4', IOD: 'IOD', NAO: 'NAO', AO: 'AO', EAWR: 'EAWR', NAtl_SSTA: 'N. Atlantic SST', PDO: 'PDO',localSst:'Annual SST (OISST)'};
   const modeColors = {Nino34:'#9b5844', IOD:'#3b7772', NAO:'#7b6b85', AO:'#4e708f', EAWR:'#958044', NAtl_SSTA:'#9b6f7b', PDO:'#73855c',localSst:'#6b7661'};
@@ -201,7 +201,7 @@
 
   function makeMap(land) {
     mapLand=land;
-    map=L.map('map',{zoomControl:false,attributionControl:true,minZoom:3,maxZoom:16,preferCanvas:true});fitStudy();
+    map=L.map('map',{zoomControl:false,attributionControl:true,minZoom:2,maxZoom:16,preferCanvas:true});fitStudy();
     map.attributionControl.setPrefix('');map.attributionControl.addAttribution('<a href="https://www.unep-wcmc.org/" target="_blank">UNEP-WCMC: coral 2021, seagrass 2021, mangroves 2010</a>');
     L.control.zoom({position:'topright'}).addTo(map);
     map.createPane('coastBase');map.getPane('coastBase').style.zIndex=230;
@@ -814,7 +814,7 @@
 ;
 /* Sources follow the selected cell; geography describes study areas. */
 (() => {
- const $=id=>document.getElementById(id),T=s=>AtlasLanguage.translate(s),VERSION='20261101-combinations-r2';
+ const $=id=>document.getElementById(id),T=s=>AtlasLanguage.translate(s),VERSION='20261101-final-coverage-r1';
  AtlasLanguage.add({'Near selected point':'قرب النقطة المختارة','Study basin':'حوض الدراسة','All sources':'كل المصادر','Source area':'نطاق المصادر','Study area':'منطقة الدراسة','Nearby study area':'منطقة دراسة قريبة','Regional context':'سياق إقليمي','Photos & sources':'الصور والمصادر','News for this coast':'أخبار هذا الساحل','Papers for this coast':'أبحاث هذا الساحل','Catalogue updated':'تحديث قائمة المصادر','More news':'المزيد من الأخبار','More papers':'المزيد من الأبحاث','View regional sources':'عرض المصادر الإقليمية','Comments and corrections':'التعليقات والتصحيحات','No mapped sources for this point. Browse the basin catalogue.':'لا توجد مصادر محددة لهذه النقطة. يمكن تصفح قائمة مصادر الحوض.','Geography refers to the study area, not a measurement at this pixel.':'يشير الموقع إلى منطقة الدراسة وليس إلى قياس في هذه الخلية.'});
  let papers,news,pp=0,np=0,paperTimer,newsTimer,pnp=0,ppp=0,pointKey='';
  function context(pixel){if(document.documentElement.dataset.ready!=='true')return null;const d=AtlasUI.snapshot(),p=d.pixels[pixel??d.state.pixel];return {basin:d.meta.basins.find(b=>b.regions.includes(p[3])),region:d.meta.regions[p[3]],lat:p[1],lon:p[0],pixel:pixel??d.state.pixel};}
@@ -1027,7 +1027,7 @@
 ;
 /* Current-year observations stay separate from complete-year model training. */
 (() => {
-  const $=id=>document.getElementById(id),cache=new Map(),jsonCache=new Map(),mapCache=new Map(),VERSION='20261101-combinations-r2';let token=0,latest;
+  const $=id=>document.getElementById(id),cache=new Map(),jsonCache=new Map(),mapCache=new Map(),VERSION='20261101-final-coverage-r1';let token=0,latest;
   async function json(url){if(!jsonCache.has(url))jsonCache.set(url,fetch(url+'?v='+VERSION).then(r=>{if(!r.ok)throw Error('The 2026 records are still being prepared.');return r.json();}).catch(e=>{jsonCache.delete(url);throw e;}));return jsonCache.get(url);}
   async function binary(path){const key='./observed2026/'+path;if(!cache.has(key))cache.set(key,fetch(key+'?v='+VERSION).then(async r=>{if(!r.ok)throw Error('Current-year record unavailable.');const raw=await r.arrayBuffer();return path.endsWith('.gz')?new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():raw;}).catch(error=>{cache.delete(key);throw error;}));return cache.get(key);}
   async function load(product,native){const manifest=await json('./observed2026/manifest.json'),info=manifest.products[product];if(!info)throw Error('This product is still being prepared.');const index=await json('./observed2026/'+info.index),count=index.dates.length,chunk=Math.floor(native/index.chunkSize),row=native%index.chunkSize,folder=product+'/'+String(chunk).padStart(4,'0')+'/',suffix=index.binarySuffix||'.bin.gz',fields=['sst','anomaly','intensity','mhw'],raw=await Promise.all(fields.map(name=>binary(folder+name+suffix))),values={};fields.forEach((name,k)=>{const array=name==='mhw'?new Uint8Array(raw[k]):new Int16Array(raw[k]);values[name]=Array.from(array.slice(row*count,(row+1)*count),v=>name==='mhw'?v:v===-32768?null:v/100);if(values[name].length!==count)throw Error('Current-year record dimensions differ.');});const metricBuffer=await binary(product+'/'+index.metricsFile),all=new Float32Array(metricBuffer),metrics=Array.from(all.slice(native*6,(native+1)*6));if(metrics.length!==6)throw Error('Current-year metric dimensions differ.');return {manifest,index,values,metrics};}
@@ -1158,6 +1158,42 @@
   for(const event of ['atlasready','atlaspixelchange','atlasforecastinputschange','atlaslanguagechange'])window.addEventListener(event,update);
   $('product').addEventListener('change',update);window.addEventListener('atlasready',showIndices);window.addEventListener('atlaslanguagechange',showIndices);
   window.AtlasOutlookCombinations={loadPoint,update};
+})();
+
+;
+/* Study bounds remain visible above every basemap and year, without filtering cells. */
+(() => {
+  'use strict';
+  const T=s=>AtlasLanguage.translate(s),outlines=[],labels=[];
+  AtlasLanguage.add({'East Asia':'شرق آسيا','Study coverage':'نطاق الدراسة','Dotted outline: study coverage':'الإطار المنقط: نطاق الدراسة','Mangrove (near)':'المانغروف (بالقرب)','Mangroves (near)':'المانغروف (بالقرب)'});
+  const near={ja:'近傍', 'zh-Hans':'邻近','zh-Hant':'鄰近',ko:'인근',fil:'malapit',id:'dekat',ms:'berdekatan',vi:'lân cận',ru:'рядом',fa:'نزدیک'};
+  function mangroveLabels(){
+    const locale=AtlasLanguage.current;
+    for(const input of document.querySelectorAll('input[name="habitat"][value="4"],input[name="coverage"][value="mangrove"]')){
+      const label=input.closest('label');let text=[...label.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());
+      if(!text){text=document.createTextNode('');label.append(text);}
+      const base=input.name==='coverage'?'Mangroves':'Mangrove';
+      text.textContent=locale==='en'?base+' (near)':locale==='ar'?T(base+' (near)'):T(base)+' ('+(near[locale]||'near')+')';
+    }
+  }
+  function language(){mangroveLabels();if(!AtlasUI.map)return;const compact=AtlasUI.map.getZoom()<=2;AtlasUI.map.getContainer().classList.toggle('coverage-overview',compact);for(const {layer,name,shortName,id} of labels){layer.options.offset=[7,compact?(id==='redsea'?28:id==='gulf'?-8:10):10];layer.setContent(T(compact?shortName:name));}const key=document.getElementById('studyCoverageKey');if(key)key.querySelector('span').textContent=T('Dotted outline: study coverage');}
+  function init(){
+    const {meta}=AtlasUI.snapshot(),map=AtlasUI.map;
+    map.createPane('studyCoverage');Object.assign(map.getPane('studyCoverage').style,{zIndex:'440',pointerEvents:'none'});
+    map.createPane('studyCoverageNames');Object.assign(map.getPane('studyCoverageNames').style,{zIndex:'450',pointerEvents:'none'});
+    const renderer=L.svg({pane:'studyCoverage',padding:.3});
+    for(const basin of meta.basins){
+      const bounds=L.latLngBounds(basin.bounds);
+      const box=L.rectangle(bounds,{pane:'studyCoverage',renderer,color:'#747c80',weight:1.8,opacity:1,dashArray:'1 7',lineCap:'round',fill:false,interactive:false,className:'study-coverage-box'}).addTo(map);
+      outlines.push({id:basin.id,bounds:basin.bounds,layer:box});
+      const layer=L.tooltip({pane:'studyCoverageNames',permanent:true,interactive:false,direction:'right',offset:[7,10],className:'study-coverage-name',opacity:1}).setLatLng([bounds.getNorth()-.45,bounds.getWest()+.15]).setContent(T(basin.name)).addTo(map);
+      labels.push({layer,id:basin.id,name:basin.name,shortName:{redsea:'Red Sea',gulf:'Arabian Gulf',eastasia:'East Asia'}[basin.id]});
+    }
+    const key=document.createElement('div');key.id='studyCoverageKey';key.className='study-coverage-key';key.innerHTML='<i aria-hidden="true"></i><span></span>';document.querySelector('.map-legend').append(key);map.on('zoomend',language);language();
+    window.AtlasStudyCoverage={outlines,labels};
+  }
+  window.addEventListener('atlasready',init);window.addEventListener('atlaslanguagechange',language);
+  mangroveLabels();
 })();
 
 ;

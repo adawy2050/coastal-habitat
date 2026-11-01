@@ -24,3 +24,9 @@ html[data-theme=light] .topbar{background:#fff!important;border-bottom:0;padding
 #outlookCombinations,#allForecastIndices{scroll-margin-top:24px}.combination-table td:nth-child(n+2){direction:ltr;unicode-bidi:isolate;white-space:nowrap}@media(max-width:600px){#outlookCombinations,#allForecastIndices{margin-inline:0;padding-inline:8px}.combination-table th,.combination-table td{padding:7px 5px;font-size:11px}}
 
 @media(min-width:651px) and (max-width:1100px){.point-window-heading{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px 16px}.point-window-heading>div:first-child{grid-column:1/-1}.point-window-heading h2{overflow-wrap:normal}.point-window-controls{grid-column:1;margin:0;min-width:0;gap:14px}.point-window-controls select{max-width:26vw}#pointMotionToggle{margin:0}}
+
+.study-coverage-box{filter:drop-shadow(0 0 1px #fff);pointer-events:none!important}.study-coverage-name.leaflet-tooltip{background:#fffffff0;color:#535e62;border:1px solid #d7dcda;border-radius:2px;box-shadow:none;font:500 10px/1.4 system-ui,sans-serif;padding:3px 7px;white-space:normal;max-width:190px;pointer-events:none}.study-coverage-name.leaflet-tooltip:before{display:none}.study-coverage-key{display:flex;align-items:center;gap:7px;margin-top:7px;color:#59656b;font-size:10px;line-height:1.35}.study-coverage-key i{display:block;width:26px;flex:0 0 26px;border-top:2px dotted #747c80}
+
+.study-coverage-name.leaflet-tooltip{width:max-content;white-space:nowrap;max-width:240px}
+
+.coverage-overview .country-label{display:none!important}

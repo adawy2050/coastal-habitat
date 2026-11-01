@@ -1,6 +1,6 @@
 /* Sources follow the selected cell; geography describes study areas. */
 (() => {
- const $=id=>document.getElementById(id),T=s=>AtlasLanguage.translate(s),VERSION='20261101-combinations-r2';
+ const $=id=>document.getElementById(id),T=s=>AtlasLanguage.translate(s),VERSION='20261101-final-coverage-r1';
  AtlasLanguage.add({'Near selected point':'قرب النقطة المختارة','Study basin':'حوض الدراسة','All sources':'كل المصادر','Source area':'نطاق المصادر','Study area':'منطقة الدراسة','Nearby study area':'منطقة دراسة قريبة','Regional context':'سياق إقليمي','Photos & sources':'الصور والمصادر','News for this coast':'أخبار هذا الساحل','Papers for this coast':'أبحاث هذا الساحل','Catalogue updated':'تحديث قائمة المصادر','More news':'المزيد من الأخبار','More papers':'المزيد من الأبحاث','View regional sources':'عرض المصادر الإقليمية','Comments and corrections':'التعليقات والتصحيحات','No mapped sources for this point. Browse the basin catalogue.':'لا توجد مصادر محددة لهذه النقطة. يمكن تصفح قائمة مصادر الحوض.','Geography refers to the study area, not a measurement at this pixel.':'يشير الموقع إلى منطقة الدراسة وليس إلى قياس في هذه الخلية.'});
  let papers,news,pp=0,np=0,paperTimer,newsTimer,pnp=0,ppp=0,pointKey='';
  function context(pixel){if(document.documentElement.dataset.ready!=='true')return null;const d=AtlasUI.snapshot(),p=d.pixels[pixel??d.state.pixel];return {basin:d.meta.basins.find(b=>b.regions.includes(p[3])),region:d.meta.regions[p[3]],lat:p[1],lon:p[0],pixel:pixel??d.state.pixel};}
