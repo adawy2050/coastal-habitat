@@ -1,7 +1,7 @@
 /* Red Sea Habitat Heatwave Atlas. All scientific arrays are fetched locally. */
 (() => {
   'use strict';
-  const RELEASE='20261101-combinations-r1';
+  const RELEASE='20261101-combinations-r2';
   const $ = id => document.getElementById(id), S = window.AtlasStats;
   const labels = {Nino34: 'Niño-3.4', IOD: 'IOD', NAO: 'NAO', AO: 'AO', EAWR: 'EAWR', NAtl_SSTA: 'N. Atlantic SST', PDO: 'PDO',localSst:'Annual SST (OISST)'};
   const modeColors = {Nino34:'#9b5844', IOD:'#3b7772', NAO:'#7b6b85', AO:'#4e708f', EAWR:'#958044', NAtl_SSTA:'#9b6f7b', PDO:'#73855c',localSst:'#6b7661'};

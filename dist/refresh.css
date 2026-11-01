@@ -22,3 +22,5 @@ html[data-theme=light] .topbar{background:#fff!important;border-bottom:0;padding
 .combination-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:12px}.combination-table th,.combination-table td{padding:8px 12px;text-align:start;border-bottom:1px solid #dce5df}.combination-table th{font-weight:600;color:#365b60}.combination-table tbody tr:hover{background:#edf3ef}#combinationModel{max-width:100%;margin:8px 0}#allForecastIndex{margin:8px 0}
 
 #outlookCombinations,#allForecastIndices{scroll-margin-top:24px}.combination-table td:nth-child(n+2){direction:ltr;unicode-bidi:isolate;white-space:nowrap}@media(max-width:600px){#outlookCombinations,#allForecastIndices{margin-inline:0;padding-inline:8px}.combination-table th,.combination-table td{padding:7px 5px;font-size:11px}}
+
+@media(min-width:651px) and (max-width:1100px){.point-window-heading{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px 16px}.point-window-heading>div:first-child{grid-column:1/-1}.point-window-heading h2{overflow-wrap:normal}.point-window-controls{grid-column:1;margin:0;min-width:0;gap:14px}.point-window-controls select{max-width:26vw}#pointMotionToggle{margin:0}}
