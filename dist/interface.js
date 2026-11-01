@@ -20,7 +20,7 @@
   function pause(){clearInterval(timer);timer=null;$('photoPlay').textContent='Play slideshow';}
   $('photoPrev').onclick=()=>{page--;render();};$('photoNext').onclick=()=>{page++;render();};$('photoBasin').onchange=()=>{autoPhotoArea=false;page=0;render();};$('photoPlay').onclick=()=>{if(timer){pause();return;}timer=setInterval(()=>{if(!document.hidden&&!dialog.open){page++;render();}},6500);$('photoPlay').textContent='Pause slideshow';};document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});window.addEventListener('atlasmotionchange',()=>{if(document.documentElement.dataset.motion==='off')pause();});
   window.addEventListener('atlaspixelchange',e=>updatePixel(e.detail));window.addEventListener('atlaslanguagechange',()=>{render();updatePixel();if(dialog.open)open(active);});
-  fetch('./images/credits.json?v=20261101-light-coasts-r1').then(r=>{if(!r.ok)throw Error('Photo catalogue unavailable');return r.json();}).then(data=>{photos=data;render();const p=window.AtlasDebug?.pixels?.[AtlasDebug.state.pixel];if(p)lastPoint={basin:AtlasDebug.meta.basins.find(b=>b.regions.includes(p[3])).id,habitats:p[2],latitude:p[1],longitude:p[0]};updatePixel();window.dispatchEvent(new Event('atlasphotosready'));});
+  fetch('./images/credits.json?v=20261101-combinations-r1').then(r=>{if(!r.ok)throw Error('Photo catalogue unavailable');return r.json();}).then(data=>{photos=data;render();const p=window.AtlasDebug?.pixels?.[AtlasDebug.state.pixel];if(p)lastPoint={basin:AtlasDebug.meta.basins.find(b=>b.regions.includes(p[3])).id,habitats:p[2],latitude:p[1],longitude:p[0]};updatePixel();window.dispatchEvent(new Event('atlasphotosready'));});
   window.AtlasPhotos={open,picture,previewUrl,credit,nearest,forPoint,get photos(){return photos;}};
 })();
 
@@ -116,7 +116,7 @@
 /* Red Sea Habitat Heatwave Atlas. All scientific arrays are fetched locally. */
 (() => {
   'use strict';
-  const RELEASE='20261101-light-coasts-r1';
+  const RELEASE='20261101-combinations-r1';
   const $ = id => document.getElementById(id), S = window.AtlasStats;
   const labels = {Nino34: 'Niño-3.4', IOD: 'IOD', NAO: 'NAO', AO: 'AO', EAWR: 'EAWR', NAtl_SSTA: 'N. Atlantic SST', PDO: 'PDO',localSst:'Annual SST (OISST)'};
   const modeColors = {Nino34:'#9b5844', IOD:'#3b7772', NAO:'#7b6b85', AO:'#4e708f', EAWR:'#958044', NAtl_SSTA:'#9b6f7b', PDO:'#73855c',localSst:'#6b7661'};
@@ -814,7 +814,7 @@
 ;
 /* Sources follow the selected cell; geography describes study areas. */
 (() => {
- const $=id=>document.getElementById(id),T=s=>AtlasLanguage.translate(s),VERSION='20261101-light-coasts-r1';
+ const $=id=>document.getElementById(id),T=s=>AtlasLanguage.translate(s),VERSION='20261101-combinations-r1';
  AtlasLanguage.add({'Near selected point':'قرب النقطة المختارة','Study basin':'حوض الدراسة','All sources':'كل المصادر','Source area':'نطاق المصادر','Study area':'منطقة الدراسة','Nearby study area':'منطقة دراسة قريبة','Regional context':'سياق إقليمي','Photos & sources':'الصور والمصادر','News for this coast':'أخبار هذا الساحل','Papers for this coast':'أبحاث هذا الساحل','Catalogue updated':'تحديث قائمة المصادر','More news':'المزيد من الأخبار','More papers':'المزيد من الأبحاث','View regional sources':'عرض المصادر الإقليمية','Comments and corrections':'التعليقات والتصحيحات','No mapped sources for this point. Browse the basin catalogue.':'لا توجد مصادر محددة لهذه النقطة. يمكن تصفح قائمة مصادر الحوض.','Geography refers to the study area, not a measurement at this pixel.':'يشير الموقع إلى منطقة الدراسة وليس إلى قياس في هذه الخلية.'});
  let papers,news,pp=0,np=0,paperTimer,newsTimer,pnp=0,ppp=0,pointKey='';
  function context(pixel){if(document.documentElement.dataset.ready!=='true')return null;const d=AtlasUI.snapshot(),p=d.pixels[pixel??d.state.pixel];return {basin:d.meta.basins.find(b=>b.regions.includes(p[3])),region:d.meta.regions[p[3]],lat:p[1],lon:p[0],pixel:pixel??d.state.pixel};}
@@ -1027,7 +1027,7 @@
 ;
 /* Current-year observations stay separate from complete-year model training. */
 (() => {
-  const $=id=>document.getElementById(id),cache=new Map(),jsonCache=new Map(),mapCache=new Map(),VERSION='20261101-light-coasts-r1';let token=0,latest;
+  const $=id=>document.getElementById(id),cache=new Map(),jsonCache=new Map(),mapCache=new Map(),VERSION='20261101-combinations-r1';let token=0,latest;
   async function json(url){if(!jsonCache.has(url))jsonCache.set(url,fetch(url+'?v='+VERSION).then(r=>{if(!r.ok)throw Error('The 2026 records are still being prepared.');return r.json();}).catch(e=>{jsonCache.delete(url);throw e;}));return jsonCache.get(url);}
   async function binary(path){const key='./observed2026/'+path;if(!cache.has(key))cache.set(key,fetch(key+'?v='+VERSION).then(async r=>{if(!r.ok)throw Error('Current-year record unavailable.');const raw=await r.arrayBuffer();return path.endsWith('.gz')?new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():raw;}).catch(error=>{cache.delete(key);throw error;}));return cache.get(key);}
   async function load(product,native){const manifest=await json('./observed2026/manifest.json'),info=manifest.products[product];if(!info)throw Error('This product is still being prepared.');const index=await json('./observed2026/'+info.index),count=index.dates.length,chunk=Math.floor(native/index.chunkSize),row=native%index.chunkSize,folder=product+'/'+String(chunk).padStart(4,'0')+'/',suffix=index.binarySuffix||'.bin.gz',fields=['sst','anomaly','intensity','mhw'],raw=await Promise.all(fields.map(name=>binary(folder+name+suffix))),values={};fields.forEach((name,k)=>{const array=name==='mhw'?new Uint8Array(raw[k]):new Int16Array(raw[k]);values[name]=Array.from(array.slice(row*count,(row+1)*count),v=>name==='mhw'?v:v===-32768?null:v/100);if(values[name].length!==count)throw Error('Current-year record dimensions differ.');});const metricBuffer=await binary(product+'/'+index.metricsFile),all=new Float32Array(metricBuffer),metrics=Array.from(all.slice(native*6,(native+1)*6));if(metrics.length!==6)throw Error('Current-year metric dimensions differ.');return {manifest,index,values,metrics};}
@@ -1111,6 +1111,53 @@
   $('pointHistoryCsv').onclick=()=>{if(!rows.length)return;const keys=['date','series','value','units','product'],d=AtlasUI.snapshot(),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([[keys.join(','),...rows.map(row=>keys.map(k=>row[k]).join(','))].join('\n')],{type:'text/csv'}));a.download=`history_outlook_${d.point[1].toFixed(2)}N_${d.point[0].toFixed(2)}E_${d.state.product}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
   for(const event of ['atlaspointwindowopen','atlaspixelchange','atlasforecastinputschange','atlaslanguagechange'])window.addEventListener(event,render);
   window.AtlasPointTimeline={render};
+})();
+
+;
+/* Forward-tested alternatives, kept separate from the published cell outlook. */
+(() => {
+  'use strict';
+  const root='./forecasts/combinations/',cache=new Map();let ticket=0,active=null,selected=null;
+  const $=id=>document.getElementById(id),ar=()=>window.AtlasLanguage?.current==='ar',T=(en,arabic)=>ar()?arabic:en;
+  const names={climatology:'التكرار التاريخي',warming:'التغير طويل الأمد',local:'الحرارة والموجات الحارة الأخيرة',observed:'ستة مؤشرات مرصودة',local_observed:'الظروف المحلية والمؤشرات المرصودة',local_pacific:'الظروف المحلية وENSO وPDO المرصودان',local_issued:'الظروف المحلية ومتوسط توقع ENSO',local_dynamic:'الظروف المحلية وتوقع ENSO الديناميكي',local_statistical:'الظروف المحلية وتوقع ENSO الإحصائي',local_both:'الظروف المحلية وتوقعا ENSO',local_all:'الظروف المحلية والمؤشرات المرصودة وتوقع ENSO',local_all_families:'الظروف المحلية والمؤشرات المرصودة وتوقعا ENSO'};
+  const name=c=>ar()?(names[c.id]||c.name):c.name;
+  function get(path,binary=false){if(!cache.has(path))cache.set(path,fetch(root+path).then(async r=>{if(!r.ok)throw Error('Comparison record unavailable');if(!binary)return r.json();const stream=r.body.pipeThrough(new DecompressionStream('gzip'));return new Float32Array(await new Response(stream).arrayBuffer());}).catch(e=>{cache.delete(path);throw e;}));return cache.get(path);}
+  const panel=document.createElement('figure');panel.id='outlookCombinations';panel.className='chart-card';panel.innerHTML='<h3 id="combinationTitle"></h3><p id="combinationNote" class="detail-note"></p><label id="combinationLabel" for="combinationModel"></label> <select id="combinationModel"></select><div id="combinationPlot" class="large-chart"></div><div style="overflow-x:auto"><table class="combination-table"><thead id="combinationHead"></thead><tbody id="combinationRows"></tbody></table></div><p id="combinationSkillNote" class="detail-note"></p><a id="combinationCsv" href="#"></a>';$('outlook').append(panel);
+  const indices=document.createElement('figure');indices.id='allForecastIndices';indices.className='chart-card';indices.innerHTML='<h3 id="allForecastTitle"></h3><label id="allForecastLabel" for="allForecastIndex"></label> <select id="allForecastIndex"></select><div id="allForecastPlot" class="large-chart"></div><p id="allForecastNote" class="detail-note"></p><a href="https://www.jamstec.go.jp/aplinfo/sintexf/e/seasonal/data_download.html" target="_blank" rel="noopener">JAMSTEC · SINTEX-F</a> · <a href="./forecasts/combinations/available_indices.json" download>JSON</a>';$('climate').append(indices);
+  function layout(y){return {paper_bgcolor:'transparent',plot_bgcolor:'transparent',font:{size:11,color:'#364d53'},margin:{l:65,r:25,t:20,b:110},legend:{orientation:'h',y:-.24,font:{size:10}},xaxis:{type:'date',gridcolor:'#e3e9e5'},yaxis:{title:y,gridcolor:'#e3e9e5'},hovermode:'x unified'};}
+  async function loadPoint(product,pixel){const s=await get(product+'/summary.json'),f=await AtlasUI.forecast(product,pixel),chunk=Math.floor(f.index/s.chunkCells),a=await get(s.pointFilePattern.replace('{chunk}',chunk),true);if(f.nativeCells!==s.nativeCells)throw Error('Comparison grid does not match this product');const row=a.subarray((f.index%s.chunkCells)*s.fields.length,(f.index%s.chunkCells+1)*s.fields.length);if(row.length!==s.fields.length)throw Error('Incomplete comparison record');return {summary:s,sourceIndex:f.index,publishedIssue:f.issueDate,values:Object.fromEntries(s.fields.map((key,k)=>[key,row[k]])),published:f.probability};}
+  function render(){if(!active)return;const {summary:s,values:v}=active;
+    $('combinationTitle').textContent=T('Compare outlook models','مقارنة نماذج التوقع');
+    $('combinationNote').textContent=T(`October 2026 comparison · December 2026–February 2027. ${s.nTest} test seasons after baseline availability. Published outlook issue: ${active.publishedIssue}. These comparisons do not replace it.`,`إصدار أكتوبر 2026 · توقع ديسمبر–فبراير. ${s.nTest} مواسم تحقق بعد توافر المرجع. لا تحل هذه المقارنات محل التوقع المنشور.`);
+    $('combinationLabel').textContent=T('Combination','مجموعة المدخلات');
+    if(!selected)selected=s.candidates[Math.round(v.selected_candidate)].id;const select=$('combinationModel');select.replaceChildren(...s.candidates.map(c=>new Option(name(c),c.id)));select.value=selected;
+    const c=s.candidates.find(c=>c.id===selected)||s.candidates[0],x=s.testYears.map(y=>y+'-12-01'),future=[s.seasonStart,s.seasonEnd];
+    const traces=[{x,y:x.map((_,i)=>100*v['backtest:climatology:'+s.testYears[i]]),name:T('Historical frequency','التكرار التاريخي'),mode:'lines',line:{color:'#8b8f87',width:1.3}},
+      {x,y:x.map((_,i)=>100*v['backtest:'+c.id+':'+s.testYears[i]]),name:name(c),mode:'lines+markers',line:{color:'#376d73',width:1.8},marker:{size:4}},
+      {x,y:x.map((_,i)=>100*v['policy_backtest:'+s.testYears[i]]),name:T('Choice using earlier tests','الاختيار بالاختبارات السابقة'),mode:'lines',line:{color:'#8c664b',width:1.5,dash:'dash'}},
+      {x:future,y:future.map(()=>100*v['candidate_probability:'+c.id]),name:T('Next season · selected combination','الموسم القادم · المجموعة المختارة'),mode:'lines+markers',line:{color:'#376d73',dash:'dot',width:2},marker:{size:4}},
+      {x:future,y:future.map(()=>100*active.published),name:T('Published outlook','التوقع المنشور'),mode:'lines',line:{color:'#777169',width:1.7,dash:'dot'}}];
+    Plotly.react('combinationPlot',traces,{...layout(T('Probability (%)','الاحتمال (%)')),yaxis:{title:T('Probability (%)','الاحتمال (%)'),range:[0,100]}},{responsive:true,displaylogo:false,toImageButtonOptions:{format:'svg',filename:'point-outlook-combinations'}});
+    $('combinationHead').innerHTML='<tr>'+[T('Inputs','المدخلات'),T('Next-season probability','احتمال الموسم القادم'),T('Brier skill','مهارة براير')].map(t=>'<th>'+t+'</th>').join('')+'</tr>';
+    const tbody=$('combinationRows');tbody.replaceChildren();for(const c of s.candidates){const tr=document.createElement('tr');for(const text of [name(c),(v['candidate_probability:'+c.id]*100).toFixed(1)+'%',v['candidate_skill:'+c.id].toFixed(3)]){const td=document.createElement('td');td.textContent=text;tr.append(td);}tbody.append(tr);}
+    $('combinationSkillNote').textContent=T(`Positive skill means lower error than historical frequency. Each row is a separate forward test; the best row is not an independent estimate of selection skill. Skill of the earlier-test selection procedure: ${v.policy_skill.toFixed(3)}. Local SST uses an OISST cell ${v.sst_distance_km.toFixed(1)} km away. The upcoming probability refers to the whole season.`,`المهارة الموجبة تعني خطأ أقل من التكرار التاريخي. كل صف اختبار زمني مستقل للنموذج؛ ولا تعني أفضل نتيجة مهارة مؤكدة لعملية الاختيار. مهارة الاختيار بالاختبارات السابقة: ${v.policy_skill.toFixed(3)}. حرارة السطح من خلية OISST تبعد ${v.sst_distance_km.toFixed(1)} كم. احتمال التوقع يخص الموسم كاملاً.`);
+    $('combinationCsv').textContent=T('Download this point’s comparison','تنزيل مقارنة هذه النقطة');
+  }
+  async function update(){if(document.documentElement.dataset.ready!=='true')return;const id=++ticket;try{const d=AtlasUI.snapshot(),result=await loadPoint(d.state.product,d.state.pixel);if(id!==ticket)return;if(!active||active.summary.product!==result.summary.product||active.sourceIndex!==result.sourceIndex)selected=null;active=result;render();}catch(e){if(id===ticket)$('combinationNote').textContent=e.message;}}
+  $('combinationModel').addEventListener('change',e=>{selected=e.target.value;render();});
+  $('combinationCsv').addEventListener('click',e=>{e.preventDefault();if(!active)return;const {summary:s,values:v}=active,lines=['combination,season_start,probability,brier_skill,test_seasons'];for(const c of s.candidates)lines.push([c.id,s.seasonStart,v['candidate_probability:'+c.id],v['candidate_skill:'+c.id],s.nTest].join(','));const url=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/csv'})),a=document.createElement('a');a.href=url;a.download='point-outlook-combinations.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);});
+  async function showIndices(){try{const data=await get('available_indices.json'),select=$('allForecastIndex'),previous=select.value||'DMI';select.replaceChildren(...Object.entries(data.indices).map(([key,s])=>new Option(s.label,key)));select.value=previous;const s=data.indices[select.value],colour='#386c70',traces=[];
+    traces.push({x:s.observedDates.slice(-24),y:s.observedValues.slice(-24),name:T('Observed','مرصود'),mode:'lines',line:{color:'#53656a',width:1.7}});
+    s.members.forEach(y=>traces.push({x:s.dates,y,mode:'lines',showlegend:false,hoverinfo:'skip',line:{color:'rgba(56,108,112,.12)',width:.7},connectgaps:false}));
+    traces.push({x:s.dates,y:s.mean,name:T('Issued forecast mean','متوسط التوقع المنشور'),mode:'lines+markers',line:{color:colour,width:2,dash:'dot'},marker:{size:3}});
+    $('allForecastTitle').textContent=T('Nine available climate-index forecasts','تسعة توقعات متاحة لمؤشرات المناخ');$('allForecastLabel').textContent=T('Index','المؤشر');
+    await Plotly.react('allForecastPlot',traces,layout(s.label+' (°C)'),{responsive:true,displaylogo:false,toImageButtonOptions:{format:'svg',filename:'issued-index-forecast'}});
+    $('allForecastNote').textContent=T(`JAMSTEC SINTEX-F · retrieved ${data.retrieved.slice(0,10)} · monthly forecasts through ${s.dates.at(-1).slice(0,7)}. Faint lines show ensemble members. These nine feeds contain observed history and current forecasts, not past forecast issues. The tested combinations above use the separate IRI historical ENSO forecast archive; the other forecast indices remain available here for comparison.`,`JAMSTEC SINTEX-F · جُلبت في ${data.retrieved.slice(0,10)} · توقعات شهرية حتى ${s.dates.at(-1).slice(0,7)}. الخطوط الباهتة لأعضاء النموذج. تشمل الملفات التسعة الرصد السابق والتوقع الحالي، ولا تشمل إصدارات التوقع السابقة. تستخدم المجموعات المختبرة أرشيف IRI لتوقع ENSO؛ وتُعرض بقية المؤشرات هنا للمقارنة.`);
+  }catch(e){$('allForecastNote').textContent=e.message;}}
+  $('allForecastIndex').addEventListener('change',showIndices);
+  for(const event of ['atlasready','atlaspixelchange','atlasforecastinputschange','atlaslanguagechange'])window.addEventListener(event,update);
+  $('product').addEventListener('change',update);window.addEventListener('atlasready',showIndices);window.addEventListener('atlaslanguagechange',showIndices);
+  window.AtlasOutlookCombinations={loadPoint,update};
 })();
 
 ;

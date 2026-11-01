@@ -18,3 +18,7 @@ html[data-theme=light] .topbar{background:#fff!important;border-bottom:0;padding
 .news-date,.source-geography{font-size:10px}.paper-row p{font-size:11px}.paper-topic{font-size:10px}.point-coast-photos figcaption small{font-size:10px}#pointMotionToggle{font-size:10px;margin-inline-start:auto}@media(max-width:650px){#pointMotionToggle{grid-column:2;grid-row:2;justify-self:end;font-size:0;padding:6px 10px;min-width:32px}#pointMotionToggle:before{content:attr(data-symbol);font-size:17px}.point-window-controls{padding-inline-end:42px}.point-window-controls select{max-width:35vw}.point-coast-photos figcaption small{font-size:8px}}
 
 .selected-habitat-marker{filter:drop-shadow(0 0 1.5px #fff)}
+
+.combination-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:12px}.combination-table th,.combination-table td{padding:8px 12px;text-align:start;border-bottom:1px solid #dce5df}.combination-table th{font-weight:600;color:#365b60}.combination-table tbody tr:hover{background:#edf3ef}#combinationModel{max-width:100%;margin:8px 0}#allForecastIndex{margin:8px 0}
+
+#outlookCombinations,#allForecastIndices{scroll-margin-top:24px}.combination-table td:nth-child(n+2){direction:ltr;unicode-bidi:isolate;white-space:nowrap}@media(max-width:600px){#outlookCombinations,#allForecastIndices{margin-inline:0;padding-inline:8px}.combination-table th,.combination-table td{padding:7px 5px;font-size:11px}}

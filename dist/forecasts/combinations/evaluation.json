@@ -1,0 +1,48 @@
+{
+  "oisst": {
+    "nativeCells": 2264,
+    "testSeasons": 10,
+    "medianPolicySkill": 0.17543372511863708,
+    "positivePolicySkillPercent": 80.78621908127208,
+    "byBasin": {
+      "redsea": {
+        "nativeCells": 325,
+        "medianPolicySkill": 0.15425336360931396,
+        "positivePolicySkillPercent": 79.6923076923077
+      },
+      "gulf": {
+        "nativeCells": 158,
+        "medianPolicySkill": 0.03220641613006592,
+        "positivePolicySkillPercent": 68.9873417721519
+      },
+      "eastasia": {
+        "nativeCells": 1781,
+        "medianPolicySkill": 0.19742220640182495,
+        "positivePolicySkillPercent": 82.03256597417182
+      }
+    }
+  },
+  "mur": {
+    "nativeCells": 166771,
+    "testSeasons": 3,
+    "medianPolicySkill": 0.020836591720581055,
+    "positivePolicySkillPercent": 52.38860473343687,
+    "byBasin": {
+      "redsea": {
+        "nativeCells": 41393,
+        "medianPolicySkill": 0.0,
+        "positivePolicySkillPercent": 49.764452926823374
+      },
+      "gulf": {
+        "nativeCells": 14295,
+        "medianPolicySkill": -0.02570796012878418,
+        "positivePolicySkillPercent": 33.746065057712485
+      },
+      "eastasia": {
+        "nativeCells": 111083,
+        "medianPolicySkill": 0.048500776290893555,
+        "positivePolicySkillPercent": 55.76550867369444
+      }
+    }
+  }
+}

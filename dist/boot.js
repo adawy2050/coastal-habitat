@@ -5,7 +5,7 @@
     const hero=document.querySelector('.hero-image img');
     await document.fonts.ready;
     await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);
-    try{await Promise.all([load('./vendor/leaflet.js'),load('./vendor/plotly-cartesian.min.js')]);await load('./interface.js?v=20261101-light-coasts-r1');}
+    try{await Promise.all([load('./vendor/leaflet.js'),load('./vendor/plotly-cartesian.min.js')]);await load('./interface.js?v=20261101-combinations-r1');}
     catch(error){document.querySelector('#loadingText').textContent=error.message;document.documentElement.dataset.error=error.message;}
   }
   start();
