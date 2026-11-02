@@ -3,7 +3,7 @@
 The extension downloads real SST observations for the existing habitat cells. It does not replace the archived historical arrays, change habitat footprints, or add an unfinished year to the annual forecast training.
 
 - Verified upstream availability on 22 October 2026: NASA/JPL MUR v4.1 through 20 October; NOAA OISST v2.1 through 20 October (recent NCEI daily files are preliminary). The ERDDAP OISST mirror was behind NCEI and was not used for the latest 2026 observations.
-- Downloads include December 2025 for detection across the year boundary. All new writes are isolated under `/minamitori/data2/eladawy/ATLAS_UPDATE_20261022`; original study archives are read only.
+- Downloads include December 2025 for detection across the year boundary. All new writes are isolated in a separate update workspace (`ATLAS_UPDATE_20261022`); original study archives are read only.
 - Native cells and atlas mappings remain unchanged: MUR 166,771 cells and OISST 2,264 cells across the three studies.
 - Fixed source climatologies and p90 thresholds remain 2003–2022 for MUR and 1982–2011 for OISST.
 - Red Sea/Gulf: at least five consecutive days above the fixed threshold, without gap joining, matching their source code.

@@ -44,7 +44,8 @@ GHRSST MUR is the first view (2003–2025, 0.01°, baseline 2003–2022). OISST 
 ## Run locally
 
 ```powershell
-cd 'D:\Red Sea paper\habitat-mhw-atlas'
+git clone https://github.com/adawy2050/coastal-habitat.git
+cd coastal-habitat
 powershell -ExecutionPolicy Bypass -File .\preview.ps1
 ```
 
@@ -92,7 +93,7 @@ The combined builder reads `_cache/redsea_atlas_base` (the preserved original di
 
 Ahmed Eladawy. Contact: ahmed.eladawy@jamstec.go.jp. SST: NASA/JPL GHRSST MUR v4.1 and NOAA OISST v2.1. Habitat inventories: UNEP-WCMC Ocean+ Habitats (coral 2021, seagrass 2021, mangroves 2010). Climate: NOAA CPC, PSL and NCEI ERSSTv5. Satellite imagery: Esri, Vantor, Earthstar Geographics and the GIS User Community. Coastline: GSHHG 2.3.7 under LGPL, with Natural Earth public-domain fallback. Detailed GSHHG vertices are retained in lazy map tiles. Leaflet 1.9.4, Plotly.js 2.35.2, jsPDF 4.2.1 and jsPDF-AutoTable 5.0.8 are vendored with their original license notices. Original data providers' use and attribution terms continue to apply. This repository contains sampled numerical habitat-cell values and rendered coverage maps, not the original habitat polygon datasets or cached satellite imagery.
 
-The 470-photo collection includes Red Sea reefs, seagrass and Farasan mangroves; Arabian Gulf reefs, UAE and Qatar mangroves; real satellite views; and clearly labelled bleaching comparisons from other regions. Full originals are retained locally in `D:\Red Sea paper\atlas-photo-library`, with SHA-256 hashes and source download URLs. Compact previews are hosted on Pages. Sources, photographers and licences are retained in [`dist/images/credits.json`](dist/images/credits.json) and [`PHOTO_AUDIT.md`](dist/images/PHOTO_AUDIT.md). Original photos are unedited. Their licences apply independently of the portal code. The viewer supports full native pixels, pan, download and keyboard navigation. Photos illustrate habitats and do not describe the selected pixel's condition.
+The 470-photo collection includes Red Sea reefs, seagrass and Farasan mangroves; Arabian Gulf reefs, UAE and Qatar mangroves; real satellite views; and clearly labelled bleaching comparisons from other regions. Full-resolution originals are linked from the photo credits, with SHA-256 hashes and source download URLs. Compact previews are hosted on Pages. Sources, photographers and licences are retained in [`dist/images/credits.json`](dist/images/credits.json) and [`PHOTO_AUDIT.md`](dist/images/PHOTO_AUDIT.md). Original photos are unedited. Their licences apply independently of the portal code. The viewer supports full native pixels, pan, download and keyboard navigation. Photos illustrate habitats and do not describe the selected pixel's condition.
 
 ## Editing the research and news sections
 

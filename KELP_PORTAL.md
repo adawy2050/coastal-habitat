@@ -12,9 +12,9 @@ The new pages share the atlas's light sea-green/slate palette, full-width map, s
 
 ## Adopted sources
 
-**Saccharina longissima:** `D:/kep model/kelp_paper_revision_20260306/ssp_model_runs_20261020/manuscript_TPM20p43_20261021`. The adopted historical run has 99 stations, 1996–2020; SSP1-2.6 and SSP5-8.5 cover 2021–2100. The 2021–2025 adjustment interval is marked. The portal uses per-thallus results, not a new bed-area or density extrapolation. It preserves the actual internal-step joint-growth-factor mean, rather than multiplying averaged factors. Historical annual means, peaks and detachment were checked against the native annual station table. The manuscript interpretation and acknowledgements follow the package checked on 26 October 2026.
+**Saccharina longissima:** revised model delivery `manuscript_TPM20p43_20261021` (21 October 2026). The adopted historical run has 99 stations, 1996–2020; SSP1-2.6 and SSP5-8.5 cover 2021–2100. The 2021–2025 adjustment interval is marked. The portal uses per-thallus results, not a new bed-area or density extrapolation. It preserves the actual internal-step joint-growth-factor mean, rather than multiplying averaged factors. Historical annual means, peaks and detachment were checked against the native annual station table. The manuscript interpretation and acknowledgements follow the package checked on 26 October 2026.
 
-**Saccharina japonica:** `D:/kep model/otherspeciesmodels/Saccharina_japonica_focus/32_Japonica_1931_model_ready_20261008/outputs_1991_2020_higher_mixedNO3`. All 1,930 completed station scenarios are included, 1991–2020. The blocked `JAP_OCC_000010` is excluded. Earlier rejected calibration branches are not substituted for this completed delivery. No completed future run was found or invented. The 2019 nutrient-source switch is marked. Individual mass, mature density, bed standing biomass, component growth factors and the mature-compartment mass budget remain distinct. Seasonal tissue loss is part of erosion and is not added twice. No unsupported joint-growth-factor reconstruction is made from the Japonica daily-average factors.
+**Saccharina japonica:** completed model delivery `32_Japonica_1931_model_ready_20261008`, scenario `outputs_1991_2020_higher_mixedNO3`. All 1,930 completed station scenarios are included, 1991–2020. The blocked `JAP_OCC_000010` is excluded. Earlier rejected calibration branches are not substituted for this completed delivery. No completed future run was found or invented. The 2019 nutrient-source switch is marked. Individual mass, mature density, bed standing biomass, component growth factors and the mature-compartment mass budget remain distinct. Seasonal tissue loss is part of erosion and is not added twice. No unsupported joint-growth-factor reconstruction is made from the Japonica daily-average factors.
 
 ## Display data
 
@@ -26,8 +26,10 @@ No raw restricted SENTAN forcing, private manuscript access links, full manuscri
 
 ## Rebuild and verify
 
+Full extraction requires the original model deliveries, which are not included in this repository. Configure the source locations in the extraction and source-verification scripts for your environment. The published viewer and presentation-asset checks use the included files.
+
 ```powershell
-cd 'D:\Red Sea paper\habitat-mhw-atlas'
+# Run from the root of your cloned repository.
 python scripts/build_kelp_portal.py
 python scripts/package_kelp_maps.py
 python scripts/verify_kelp_portal.py

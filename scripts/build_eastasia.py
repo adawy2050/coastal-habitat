@@ -70,6 +70,8 @@ def main():
     audit=json.loads((EAST/'validation.json').read_text());audit.update(mergeChecks=checks,habitatCells=len(added),habitatRecords=meta['basins'][-1]['habitatRecords'],regions=regions,allChecksPassed=True,intensityNote='Temperature intensity is reconstructed from saved anomaly + climatology - p90 threshold; the saved exceedance field is an integer flag, not degrees C.',previousMetadataSha256=hashlib.sha256((base/'metadata.json').read_bytes()).hexdigest())
     audit['intensityConvention']='Signed SST minus p90 over saved event masks, including joined gap days and calendar-year fragments; negative values retained.'
     for check in audit['checks']:check['intensityUnits']='Signed degrees C relative to saved p90 threshold'
+    audit.pop('sourceRoots',None)
+    audit['sourceRuns']={'mur':'BASIC_HOBDAY_t192_w8','oisst':'OISST_HOBDAY_1982_2025_BASE1982_2011'}
     write(DATA/'eastasia_validation.json',audit);validation=json.loads((base/'validation.json').read_text());validation.update(eastAsiaValidation='eastasia_validation.json',pixelCount=meta['pixels'],recordCount=meta['habitatRecords']);write(DATA/'validation.json',validation)
     print('EAST ASIA APPENDED',len(added),'cells;',len(regions),'ecoregions;',len(newgroups),'groups;',meta['pixels'],'total habitat cells')
 if __name__=='__main__':main()
