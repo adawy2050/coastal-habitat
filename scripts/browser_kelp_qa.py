@@ -32,7 +32,7 @@ async def main():
   await page.locator('#budgetRecord').select_option('historical')
   await page.locator('#seasonPeriod').select_option('late')
   assert await page.evaluate("document.querySelector('#seasonPlot').data.length===6")
-  assert await page.evaluate("document.querySelector('#factorsPlot').data.length===8")
+  assert await page.evaluate("document.querySelector('#factorsPlot').data.length===4")
   await page.locator('#seasonPanel').evaluate('(e)=>e.scrollIntoView({block:"start"})')
   await page.screenshot(path=str(ROOT/'qa/kelp-future-factors.png'))
   async with page.expect_download() as download:await page.locator('#downloadStation').click()
@@ -76,6 +76,6 @@ async def main():
   assert not errors,errors
   result.update(passed=True,browserErrors=errors)
   (ROOT/'qa/kelp_browser_results.json').write_text(json.dumps(result,indent=2))
-  await browser.close();print('PASS: home navigation, both kelp species, 2,029 stations, future factors, point CSV, print layout, Arabic/Japanese mobile, and legacy atlas links.')
+  await browser.close();print('PASS: home navigation, both kelp species, 2,029 stations, historical factors, future mass, point CSV, print layout, Arabic/Japanese mobile, and legacy atlas links.')
 
 if __name__=='__main__':asyncio.run(main())
