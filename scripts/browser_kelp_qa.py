@@ -15,6 +15,7 @@ async def main():
   await page.screenshot(path=str(ROOT/'qa/observatory-home.png'),full_page=True)
   await page.locator('a[href*="kelp/"]').click()
   await page.wait_for_function("document.documentElement.dataset.ready==='true'",timeout=90000)
+  await page.wait_for_function("document.documentElement.dataset.mixedReady==='true'",timeout=90000);await page.locator('#bothSpecies').uncheck();await page.wait_for_function('!KelpPortal.combined')
   assert await page.locator('#station option').count()==99
   data=await page.evaluate("({state:KelpPortal.state,counts:Object.fromEntries(Object.entries(KelpPortal.catalogue.species).map(([k,v])=>[k,v.stations])),records:Object.fromEntries(Object.entries(KelpPortal.records).map(([k,v])=>[k,[v.monthly.dates[0],v.monthly.dates.at(-1),v.monthly.dates.length]]))})")
   assert data['counts']=={'longissima':99,'japonica':1930}
