@@ -1,4 +1,17 @@
-# Coastal Habitat Heatwave Atlas
+# Coastal habitat observatory
+
+The home page now links to the marine heatwave atlas and the kelp digital twin. The third entry, the seagrass digital twin, is marked under construction; no seagrass model or data are included.
+
+- Home: https://adawy2050.github.io/redsea-habitat-mhw-atlas/
+- Heatwave atlas: https://adawy2050.github.io/redsea-habitat-mhw-atlas/heatwaves.html
+- Kelp digital twin: https://adawy2050.github.io/redsea-habitat-mhw-atlas/kelp/
+
+Existing root URLs with atlas coordinates, filters or section fragments still open the heatwave atlas with their parameters preserved. The atlas HTML source is now `dist/heatwaves.html`; `dist/index.html` is the home page. Scientific atlas arrays and the weekly climate refresh retain their existing locations.
+
+The kelp viewer includes 99 Longissima stations (1996–2020 and two 2021–2100 SSP runs) and 1,930 Japonica historical stations (1991–2020). See [KELP_PORTAL.md](KELP_PORTAL.md) for adopted source runs, acknowledgements, scope, data format and reproduction.
+
+## Heatwave atlas
+
 
 A static atlas of **210,680 habitat cells** across the Red Sea, Arabian Gulf, East Asia and western Pacific. It includes coral, seagrass, mangrove and kelp/macroalgae footprints, annual and monthly marine heatwave histories, native daily OISST temperature, climate indices and separately backtested seasonal probabilities.
 

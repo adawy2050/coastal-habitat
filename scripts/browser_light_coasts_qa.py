@@ -55,7 +55,7 @@ async def main():
         assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
         assert await page.locator('#pointAnalysis').evaluate('e=>e.scrollWidth<=e.clientWidth+1')
         await page.screenshot(path=str(ROOT/'qa/light-coast-mobile-ar.png'))
-        reduced=await browser.new_context(reduced_motion='reduce');rp=await reduced.new_page();await rp.goto(BASE+'?lang=en');await rp.wait_for_function("document.documentElement.dataset.ready==='true'",timeout=90000);assert await rp.evaluate("document.documentElement.dataset.motion==='off'");assert await rp.locator('#motionToggle').is_disabled();await reduced.close()
+        reduced=await browser.new_context(reduced_motion='reduce');rp=await reduced.new_page();await rp.goto(BASE+'heatwaves.html?lang=en');await rp.wait_for_function("document.documentElement.dataset.ready==='true'",timeout=90000);assert await rp.evaluate("document.documentElement.dataset.motion==='off'");assert await rp.locator('#motionToggle').is_disabled();await reduced.close()
         assert not errors,errors
         (ROOT/'qa/light-coasts-results.json').write_text(json.dumps({'base':BASE,'passed':True,'points':results,'lightEvenWithOldDarkPreference':True,'pointSourcesDiffer':True,'paperPagesOfTen':True,'motionPauseAndReducedMotion':True,'arabicMobile':True,'browserErrors':errors},indent=2),encoding='utf8')
         await browser.close()
