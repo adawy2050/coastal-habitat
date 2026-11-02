@@ -9,7 +9,7 @@ from urllib.request import Request,urlopen
 from observed2026_sync import connection,REMOTE
 
 ROOT=Path(__file__).resolve().parents[1]
-API='https://api.github.com/repos/adawy2050/redsea-habitat-mhw-atlas'
+API='https://api.github.com/repos/adawy2050/coastal-habitat'
 ENV={**os.environ,'GIT_TERMINAL_PROMPT':'0','GCM_INTERACTIVE':'Never','PYTHONIOENCODING':'utf-8'}
 
 def run(*args):
@@ -39,7 +39,7 @@ def deploy(sha):
 
 def publish():
     assert git('branch','--show-current')=='main','Publish from the atlas main branch only.'
-    assert git('remote','get-url','origin')=='https://github.com/adawy2050/redsea-habitat-mhw-atlas.git'
+    assert git('remote','get-url','origin')=='https://github.com/adawy2050/coastal-habitat.git'
     staged=git('diff','--cached','--name-only');assert not staged,'Existing staged edits need review before automatic data publication.'
     run('git','fetch','origin');run('git','merge','--ff-only','origin/main')
     # The same science verifier used for the initial release checks every native cell.
@@ -57,7 +57,7 @@ def publish():
     allowed=git('diff','--cached','--name-only').splitlines();assert all(p.startswith(('dist/observed2026/','dist/forecasts/')) or p=='dist/asset-manifest.json' for p in allowed)
     if allowed:run('git','commit','-q','-m','Add checked 2026 MUR habitat observations for all study areas')
     sha=git('rev-parse','HEAD');run('git','push','origin','main');workflow=deploy(sha)
-    result={'status':'deployed','updatedUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'commit':sha,'workflow':workflow,'url':'https://adawy2050.github.io/redsea-habitat-mhw-atlas/','products':list(manifest['products'])}
+    result={'status':'deployed','updatedUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'commit':sha,'workflow':workflow,'url':'https://adawy2050.github.io/coastal-habitat/','products':list(manifest['products'])}
     target=ROOT/'_cache/observed2026/published.json';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(result,indent=2),encoding='utf8');print(json.dumps(result),flush=True)
 
 def main():

@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--owner', default='adawy2050')
-    parser.add_argument('--repo', default='redsea-habitat-mhw-atlas')
+    parser.add_argument('--repo', default='coastal-habitat')
     parser.add_argument('--check-only', action='store_true')
     parser.add_argument('--staged-only', action='store_true', help='Publish the current staged commit without adding in-progress assets')
     parser.add_argument('--git-auth', action='store_true', help='Use the existing GitHub sign-in through the normal Git credential helper; no credential is printed or saved')
@@ -71,7 +71,7 @@ def main():
         contents=api('GET',repo_path+'/contents/README.md',optional=True)
         if not contents or not base64.b64decode(contents.get('content','')).decode(errors='replace').startswith(('# Red Sea Habitat Heatwave Atlas','# Red Sea & Arabian Gulf Habitat Heatwave Atlas','# Coastal Habitat Heatwave Atlas','# Coastal habitat observatory')):
             raise SystemExit('An unrelated nonempty repository has this name; it was left unchanged.')
-    api('PATCH',repo_path,{'description':'Marine heatwave maps for coastal habitats across the Red Sea, Arabian Gulf, East Asia and western Pacific.','homepage':f'https://{args.owner}.github.io/{args.repo}/'})
+    api('PATCH',repo_path,{'description':'Coastal habitat observatory: marine heatwaves, kelp digital twin and habitat data.','homepage':f'https://{args.owner}.github.io/{args.repo}/'})
     # Credentials live only in child-process environment, never command arguments/config files.
     env=os.environ.copy()
     auth=base64.b64encode(('x-access-token:'+token).encode()).decode()

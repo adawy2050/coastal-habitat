@@ -16,7 +16,7 @@ from PIL import Image, ImageOps, ImageDraw
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT/'_cache/photo_expansion'
 LIBRARY = ROOT.parent/'atlas-photo-library'
-UA = 'HabitatMHWAtlas/1.1 (https://github.com/adawy2050/redsea-habitat-mhw-atlas; openly licensed coastal photographs)'
+UA = 'HabitatMHWAtlas/1.1 (https://github.com/adawy2050/coastal-habitat; openly licensed coastal photographs)'
 # Area-centre coordinates are explicitly approximate, never presented as GPS.
 # Names must occur in the source title/description unless its GPS is nearby.
 AREAS = [

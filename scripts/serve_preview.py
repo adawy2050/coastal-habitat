@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]/'dist'
 
 class Handler(SimpleHTTPRequestHandler):
     def translate_path(self,path):
-        prefix='/redsea-habitat-mhw-atlas'
+        prefix='/coastal-habitat'
         if urlsplit(path).path.startswith(prefix+'/'):
             path=path[len(prefix):]
         return super().translate_path(path)
@@ -31,6 +31,6 @@ class Handler(SimpleHTTPRequestHandler):
 
 if __name__=='__main__':
     server=ThreadingHTTPServer(('127.0.0.1',8765),partial(Handler,directory=str(ROOT)))
-    print('Local: http://127.0.0.1:8765/redsea-habitat-mhw-atlas/',flush=True)
+    print('Local: http://127.0.0.1:8765/coastal-habitat/',flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:server.server_close()

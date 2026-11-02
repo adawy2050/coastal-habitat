@@ -14,4 +14,4 @@ foreach ($task in @(@{ Name='atlas-publish-2026'; Script='scripts/finish_observe
     Set-Content -LiteralPath $pidFile -Value $started.Id
     Write-Host ($task.Name + ' started as ' + $started.Id)
 }
-Write-Host 'Progress: https://adawy2050.github.io/redsea-habitat-mhw-atlas/status/'
+Write-Host 'Progress: https://adawy2050.github.io/coastal-habitat/status/'

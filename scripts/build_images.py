@@ -24,7 +24,7 @@ def main():
         if not path.exists():
             for attempt in range(5):
                 try:
-                    request = Request(photo['original'], headers={'User-Agent': 'HabitatMHWAtlas/1.0 (https://github.com/adawy2050/redsea-habitat-mhw-atlas)'})
+                    request = Request(photo['original'], headers={'User-Agent': 'HabitatMHWAtlas/1.0 (https://github.com/adawy2050/coastal-habitat)'})
                     with urlopen(request, timeout=90) as response:
                         content = response.read()
                     assert content.startswith(b'\xff\xd8')

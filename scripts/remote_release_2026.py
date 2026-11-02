@@ -8,8 +8,8 @@ from pathlib import Path
 import argparse,base64,datetime,hashlib,json,os,shutil,subprocess,sys,time,traceback
 import requests
 
-REPO='https://github.com/adawy2050/redsea-habitat-mhw-atlas.git'
-API='https://api.github.com/repos/adawy2050/redsea-habitat-mhw-atlas'
+REPO='https://github.com/adawy2050/coastal-habitat.git'
+API='https://api.github.com/repos/adawy2050/coastal-habitat'
 
 def main():
     a=argparse.ArgumentParser();a.add_argument('--root',type=Path,required=True);a.add_argument('--daemon',action='store_true');args=a.parse_args();root=args.root.resolve()
@@ -34,14 +34,14 @@ def main():
         return r.stdout.strip()
     def published():
         try:
-            r=requests.get('https://adawy2050.github.io/redsea-habitat-mhw-atlas/observed2026/manifest.json',params={'check':int(time.time())},timeout=30);r.raise_for_status();m=r.json()
+            r=requests.get('https://adawy2050.github.io/coastal-habitat/observed2026/manifest.json',params={'check':int(time.time())},timeout=30);r.raise_for_status();m=r.json()
             return m.get('allProductsComplete') and set(m.get('products',{}))=={'mur','oisst'}
         except Exception:return False
     state('Waiting for checked MUR outputs')
     deadline=time.monotonic()+24*3600
     while time.monotonic()<deadline:
         try:
-            if published():state('Published',url='https://adawy2050.github.io/redsea-habitat-mhw-atlas/');return
+            if published():state('Published',url='https://adawy2050.github.io/coastal-habitat/');return
             progress=json.loads((root/'status.json').read_text())
             if progress.get('status')!='complete':time.sleep(60);continue
             assert py.is_file(),'Release environment is missing'
@@ -80,7 +80,7 @@ def main():
             for _ in range(90):
                 r=requests.get(API+'/actions/workflows/pages.yml/runs',headers=headers,params={'per_page':5},timeout=40);r.raise_for_status();runs=[j for j in r.json()['workflow_runs'] if j['head_sha']==sha]
                 if runs and runs[0]['status']=='completed':
-                    if runs[0]['conclusion']=='success':state('Published',commit=sha,workflow=runs[0]['html_url'],url='https://adawy2050.github.io/redsea-habitat-mhw-atlas/');return
+                    if runs[0]['conclusion']=='success':state('Published',commit=sha,workflow=runs[0]['html_url'],url='https://adawy2050.github.io/coastal-habitat/');return
                     raise RuntimeError('GitHub deployment failed: '+runs[0]['html_url'])
                 time.sleep(20)
             raise TimeoutError('GitHub deployment has not completed')

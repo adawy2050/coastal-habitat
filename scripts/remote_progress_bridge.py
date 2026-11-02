@@ -13,7 +13,7 @@ def main():
     if pid:print('Progress bridge PID',pid,flush=True);return
     os.setsid();null=os.open('/dev/null',os.O_RDONLY);log=os.open(str(root/'github_progress.log'),os.O_WRONLY|os.O_CREAT|os.O_APPEND,0o600);os.dup2(null,0);os.dup2(log,1);os.dup2(log,2);os.closerange(3,256)
     (root/'github_progress.pid').write_text(str(os.getpid()))
-    base='https://api.github.com/repos/adawy2050/redsea-habitat-mhw-atlas';headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json','User-Agent':'HabitatAtlasProgressBridge'}
+    base='https://api.github.com/repos/adawy2050/coastal-habitat';headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json','User-Agent':'HabitatAtlasProgressBridge'}
     def api(path,body=None):
         req=Request(base+path,data=json.dumps(body).encode() if body is not None else None,headers=headers,method='PUT' if body is not None else 'GET')
         with urlopen(req,timeout=45) as response:return json.load(response)
@@ -38,7 +38,7 @@ def main():
                     elif stage=='Publication needs review':message='Both analyses are checked. Website publication needs review.'
                     elif stage in ['Confirming cross-year events','Preparing publication','Checking data and cell models','Deploying']:message='Both analyses are checked. '+stage+'.'
                 try:
-                    with urlopen('https://adawy2050.github.io/redsea-habitat-mhw-atlas/observed2026/manifest.json?t='+str(int(time.time())),timeout=30) as response:live=json.load(response)
+                    with urlopen('https://adawy2050.github.io/coastal-habitat/observed2026/manifest.json?t='+str(int(time.time())),timeout=30) as response:live=json.load(response)
                     published='mur' in live.get('products',{})
                 except Exception:pass
                 if published:message='The 2026 MUR and OISST observations are available in the atlas for all three regions.'

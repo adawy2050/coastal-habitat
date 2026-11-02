@@ -306,7 +306,7 @@
       const context=outlook.targets.filter(t=>t.available&&t.product===productInfo.name&&t.basin===pointBasin(point).id&&habitats.includes(t.habitat)&&(t.scope==='overall'||t.region===meta.regions[point[3]]));
       await window.AtlasReports.create({pixel:pixelId(pixel),latitude:point[1],longitude:point[0],habitats,region:meta.regions[point[3]],product:productInfo,
         source:productInfo.cells[sourceIndex(pixel,product)],distance:point[product==='mur'?6:7],metric,metricInfo:metricInfo[metric],histories,forecast,validation,seasonal,context,
-        association,localSources:await window.AtlasResources?.forPoint(pixel),scenarios:window.AtlasScenarios?.compute(),detail:await window.AtlasDetails?.load(pixel,product),observed2026:await window.AtlasObserved2026?.forPoint(pixel,product),externalForecasts:await window.AtlasExternalForecasts?.data(),dailyClimate:await window.AtlasDetails?.climate(),updated:outlook.asOf,liveClimate,webUrl:`https://adawy2050.github.io/redsea-habitat-mhw-atlas/?lat=${point[1]}&lon=${point[0]}&product=${product}`});
+        association,localSources:await window.AtlasResources?.forPoint(pixel),scenarios:window.AtlasScenarios?.compute(),detail:await window.AtlasDetails?.load(pixel,product),observed2026:await window.AtlasObserved2026?.forPoint(pixel,product),externalForecasts:await window.AtlasExternalForecasts?.data(),dailyClimate:await window.AtlasDetails?.climate(),updated:outlook.asOf,liveClimate,webUrl:`https://adawy2050.github.io/coastal-habitat/?lat=${point[1]}&lon=${point[0]}&product=${product}`});
       note('Point report downloaded.');
     }catch(error){console.error(error);note(`Report could not be created: ${error.message}`);}
     finally{button.disabled=false;button.textContent='Create point report (PDF) ';}

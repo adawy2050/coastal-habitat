@@ -9,7 +9,7 @@ from urllib.error import HTTPError
 from urllib.request import Request,urlopen
 
 ROOT=Path(__file__).resolve().parents[1]
-API='https://api.github.com/repos/adawy2050/redsea-habitat-mhw-atlas'
+API='https://api.github.com/repos/adawy2050/coastal-habitat'
 
 def read(path,default):
     try:return json.loads(path.read_text(encoding='utf8'))

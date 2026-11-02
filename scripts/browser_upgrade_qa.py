@@ -15,7 +15,7 @@ with sync_playwright() as p:
                 page.on('pageerror',lambda e:errors.append(str(e)))
                 page.on('response',lambda r:http.append([r.status,r.url]) if r.status>=400 else None)
                 page.add_init_script(f"localStorage.setItem('atlas-theme','{theme}')")
-                page.goto(f'http://127.0.0.1:8765/redsea-habitat-mhw-atlas/?lang={lang}&basin=gulf&lat=25.3&lon=55.3',wait_until='networkidle')
+                page.goto(f'http://127.0.0.1:8765/coastal-habitat/?lang={lang}&basin=gulf&lat=25.3&lon=55.3',wait_until='networkidle')
                 page.wait_for_function("document.documentElement.dataset.ready==='true' && document.querySelector('#detailPlot').data?.length===3")
                 assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
                 assert page.evaluate('document.documentElement.dataset.motion')=='off'
@@ -35,7 +35,7 @@ with sync_playwright() as p:
                 context.close()
     # Like-for-like full-domain rendering time: same viewport, bounds and filters.
     page=browser.new_page(viewport={'width':1440,'height':1000})
-    page.goto('http://127.0.0.1:8765/redsea-habitat-mhw-atlas/?lang=en&basin=all',wait_until='networkidle')
+    page.goto('http://127.0.0.1:8765/coastal-habitat/?lang=en&basin=all',wait_until='networkidle')
     page.wait_for_function("document.documentElement.dataset.ready==='true'")
     measure=page.evaluate('''async()=>{const times=[];AtlasUI.redraw();for(let i=0;i<30;i++){await new Promise(requestAnimationFrame);const t=performance.now();AtlasDebug.state.year=2003+i%23;AtlasUI.redraw();times.push(performance.now()-t);}return {mean:times.reduce((a,b)=>a+b)/times.length,p95:[...times].sort((a,b)=>a-b)[28],samples:times};}''')
     (QA/'canvas_full_view.json').write_text(json.dumps(measure,indent=2))
