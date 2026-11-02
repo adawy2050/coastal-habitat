@@ -59,4 +59,7 @@ def main():
   save(species+'.json.gz',{'species':species,'years':years,'displayUnits':'tonnes DW per year; standing stock is annual mean tonnes DW','note':note,'coverage':geo(coverage,[] if species=='japonica' else ['polygon_id','assigned_station_id']),'grids':geo(grids,['grid_2km_id','area_m2']),'records':records,'regional':{k:[round(float(v),3) for v in a.sum(axis=1)] for k,a in matrices.items()},'valuesUnit':'g DW','sourcePolygonCount':source_count})
   audit[species]={'grids':len(grids),'sourcePolygons':source_count,'areaM2':float(area.sum()),'years':[years[0],years[-1]],'regionalConservation':True}
  (ROOT/'qa/kelp_spatial_export.json').write_text(json.dumps(audit,indent=2));print(json.dumps(audit,indent=2))
-if __name__=='__main__':main()
+if __name__=='__main__':
+ main()
+ from build_kelp_polygon_results import main as build_polygons
+ build_polygons()
