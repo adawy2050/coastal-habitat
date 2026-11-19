@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "coral",
+      "region": "Northern and Central Red Sea",
+      "maxMonthlyDifference": 2.5579538487363607e-13
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "seagrass",
+      "region": "Northern and Central Red Sea",
+      "maxMonthlyDifference": 2.8421709430404007e-13
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "mangrove",
+      "region": "Northern and Central Red Sea",
+      "maxMonthlyDifference": 1.0658141036401503e-14
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "coral",
+      "region": "Southern Red Sea",
+      "maxMonthlyDifference": 8.881784197001252e-14
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "seagrass",
+      "region": "Southern Red Sea",
+      "maxMonthlyDifference": 2.149391775674303e-13
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "mangrove",
+      "region": "Southern Red Sea",
+      "maxMonthlyDifference": 3.197442310920451e-14
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "coral",
+      "region": "Gulf of Aden",
+      "maxMonthlyDifference": 9.237055564881302e-14
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "seagrass",
+      "region": "Gulf of Aden",
+      "maxMonthlyDifference": 1.8474111129762605e-13
+    },
+    {
+      "product": "mur",
+      "scope": "ecoregion",
+      "habitat": "mangrove",
+      "region": "Gulf of Aden",
+      "maxMonthlyDifference": 2.842170943040401e-14
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "coral",
+      "region": "Northern and Central Red Sea",
+      "maxMonthlyDifference": 1.4210854715202004e-14
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "seagrass",
+      "region": "Northern and Central Red Sea",
+      "maxMonthlyDifference": 1.0658141036401503e-14
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "mangrove",
+      "region": "Northern and Central Red Sea",
+      "maxMonthlyDifference": 1.0658141036401503e-14
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "coral",
+      "region": "Southern Red Sea",
+      "maxMonthlyDifference": 1.7763568394002505e-14
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "seagrass",
+      "region": "Southern Red Sea",
+      "maxMonthlyDifference": 1.2434497875801753e-14
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "mangrove",
+      "region": "Southern Red Sea",
+      "maxMonthlyDifference": 1.4210854715202004e-14
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "coral",
+      "region": "Gulf of Aden",
+      "maxMonthlyDifference": 7.105427357601002e-15
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "seagrass",
+      "region": "Gulf of Aden",
+      "maxMonthlyDifference": 7.105427357601002e-15
+    },
+    {
+      "product": "oisst",
+      "scope": "ecoregion",
+      "habitat": "mangrove",
+      "region": "Gulf of Aden",
+      "maxMonthlyDifference": 7.105427357601002e-15
+    }
+  ],
+  "annualDaysReconstructionPassed": true
+}

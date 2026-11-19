@@ -1,0 +1,31 @@
+{
+  "updatedUtc": "2026-10-22T08:01:39.945364+00:00",
+  "message": "Downloading 2026 habitat-cell observations; original 1982/2003-2025 archives remain unchanged",
+  "jobs": [
+    {
+      "name": "GHRSST MUR \u00b7 three study areas",
+      "product": "mur",
+      "basin": "all",
+      "stage": "downloading",
+      "status": "downloading",
+      "completed": 190,
+      "total": 2049,
+      "latestDate": "2026-10-20"
+    },
+    {
+      "name": "NOAA OISST \u00b7 three study areas",
+      "product": "oisst",
+      "basin": "all",
+      "stage": "complete",
+      "status": "complete",
+      "completed": 324,
+      "total": 324,
+      "latestDate": "2026-10-20"
+    }
+  ],
+  "photos": {
+    "completed": 461,
+    "target": 470,
+    "stage": "download"
+  }
+}

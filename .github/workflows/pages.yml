@@ -1,0 +1,64 @@
+name: Publish habitat heatwave atlas
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '20 0 * * 1'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh NOAA observations and seasonal probabilities
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          python -m pip install numpy pandas scipy requests lxml
+          python scripts/update_climate.py
+          python scripts/update_display_feeds.py
+          python scripts/update_content.py
+          python scripts/verify.py
+          python scripts/verify_detail.py
+      - name: Refresh issued climate-index forecasts and cell comparisons
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: |
+          python scripts/external_index_forecasts.py
+          python scripts/forecast_index_models.py
+      - name: Assemble and verify presentation assets
+        run: |
+          python scripts/build_assets.py
+          python scripts/verify_assets.py
+      - name: Save automatic refresh
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dist/data dist/detail/climate_daily.json dist/content dist/forecasts dist/interface.js dist/interface.css dist/language.js dist/asset-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh climate observations, sources and seasonal outlook'
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+          name: github-pages-${{ github.run_attempt }}
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}

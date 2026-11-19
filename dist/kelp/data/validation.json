@@ -1,0 +1,1 @@
+{"passed":true,"stationCounts":{"longissima":99,"japonica":1930},"stationScenarioFiles":2227,"sourceChecks":["complete native calendars","source station IDs and coordinates","native annual peaks","monthly-to-annual mass/flux reconciliation","japonica mass-times-density identity","per-field quantisation error bounds","source spin-up completion"],"publicBytes":27497809}

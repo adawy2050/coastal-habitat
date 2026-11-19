@@ -1,0 +1,1 @@
+Fonts sourced from https://github.com/google/fonts/tree/main/ofl/ on 18 October 2026. Inter, Source Serif 4 and Noto Sans Arabic use SIL Open Font License 1.1; see individual OFL files. WOFF2 subsets retain layout shaping and variable weights. Rebuild with python scripts/build_fonts.py.

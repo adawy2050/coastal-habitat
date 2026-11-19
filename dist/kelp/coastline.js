@@ -1,0 +1,15 @@
+/* The same native GSHHG shoreline assets as the heatwave atlas. */
+(() => {
+ let map,manifest,overview,serial=0;const cached=new Map(),active=new Map();
+ const mode=()=>document.getElementById('basemap').value;
+ function group(data,pane){const features=[...data.features].sort((a,b)=>(a.properties.kind==='coast'?9:a.properties.level)-(b.properties.kind==='coast'?9:b.properties.level));return L.geoJSON({type:'FeatureCollection',features},{pane,interactive:false,smoothFactor:0,filter:f=>mode()==='coastline'||pane==='kelpCoastOverview'||f.properties.kind==='coast',style:f=>f.properties.kind==='coast'?{color:mode()==='blend'?'#aebeb7':'#647581',weight:.7,opacity:.85,fill:false}:{stroke:pane==='kelpCoastOverview',color:'#788a8d',weight:.5,fill:mode()==='coastline',fillColor:f.properties.kind==='water'?'#eaf0f4':'#dce6df',fillOpacity:1}});}
+ async function draw(rebuild=false){if(!manifest)return;const stamp=++serial;if(rebuild){for(const layer of active.values())layer.remove();active.clear();overview?.remove();overview=group(await cached.get('overview'),'kelpCoastOverview');}
+  if(mode()==='satellite'){overview?.remove();for(const l of active.values())l.remove();return;}
+  const detailed=map.getZoom()>=8,bounds=map.getBounds().pad(.1);if(!detailed){for(const l of active.values())l.remove();overview.addTo(map);return;}
+  const tiles=manifest.tiles.filter(t=>bounds.intersects(L.latLngBounds([t.bounds[1],t.bounds[0]],[t.bounds[3],t.bounds[2]]))),keys=new Set(tiles.map(t=>t.path));for(const [key,l] of active)if(!keys.has(key))l.remove();
+  overview.addTo(map);await Promise.all(tiles.map(async t=>{if(!cached.has(t.path))cached.set(t.path,fetch('../coastline/'+t.path).then(r=>{if(!r.ok)throw Error('Coastline tile unavailable');return r.json();}));try{const data=await cached.get(t.path);if(stamp!==serial)return;let layer=active.get(t.path);if(!layer){const b=t.bounds,parts=[];if(mode()==='coastline')parts.push(L.rectangle([[b[1],b[0]],[b[3],b[2]]],{pane:'kelpCoastBackground',interactive:false,stroke:false,fillColor:'#eaf0f4',fillOpacity:1}));parts.push(group(data,'kelpCoastDetail'));layer=L.layerGroup(parts);active.set(t.path,layer);}layer.addTo(map);}catch(e){console.warn(e.message);}}));if(stamp===serial&&tiles.length&&tiles.every(t=>active.has(t.path)&&map.hasLayer(active.get(t.path))))overview.remove();
+ }
+ window.addEventListener('kelpready',async()=>{map=KelpPortal.map;for(const [pane,z] of [['kelpCoastOverview',250],['kelpCoastBackground',255],['kelpCoastDetail',260]]){map.createPane(pane);map.getPane(pane).style.zIndex=z;map.getPane(pane).style.pointerEvents='none';}
+  try{manifest=await fetch('../coastline/index.json').then(r=>r.json());cached.set('overview',fetch('../coastline/'+manifest.overview.path).then(r=>r.json()));overview=group(await cached.get('overview'),'kelpCoastOverview');map.on('moveend zoomend',()=>draw());document.getElementById('basemap').addEventListener('change',()=>draw(true));map.attributionControl.addAttribution(manifest.attributionHtml);await draw();document.documentElement.dataset.shorelineReady='true';}catch(e){console.warn('Shoreline:',e.message);}
+ });
+})();

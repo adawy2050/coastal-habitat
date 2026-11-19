@@ -1,0 +1,5 @@
+dist/** -text
+dist/data/** -text
+dist/coverage/** -text
+*.f32 binary
+*.png binary

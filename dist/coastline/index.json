@@ -1,0 +1,2328 @@
+{
+  "version": "gshhg-2.3.7-full-20261022",
+  "source": "GSHHG 2.3.7, full-resolution (f), levels 1\u20134",
+  "sourceUrl": "https://github.com/GenericMappingTools/gshhg-gmt/releases/tag/2.3.7",
+  "downloadUrl": "https://github.com/GenericMappingTools/gshhg-gmt/releases/download/2.3.7/gshhg-shp-2.3.7.zip",
+  "sourceArchiveSha256": "8dbbe7e071e77e9e75f2d639239099ebca8d5c16d6a07df8169729d49f15cf41",
+  "authors": "Paul Wessel and Walter H. F. Smith",
+  "citation": "Wessel and Smith (1996), doi:10.1029/96JB00104",
+  "license": "LGPL-3.0-or-later",
+  "licenseFile": "COPYING.LESSERv3",
+  "attributionHtml": "Shoreline: <a href=\"https://www.soest.hawaii.edu/wessel/gshhg/\">GSHHG 2.3.7</a>, Wessel &amp; Smith (LGPL)",
+  "crs": "EPSG:4326",
+  "coordinateDecimalPlaces": 5,
+  "simplificationTolerance": 0,
+  "tileSizeDegrees": 4,
+  "recommendedMinZoom": 8,
+  "maxZoom": 18,
+  "overview": {
+    "path": "overview.geojson",
+    "simplificationToleranceDegrees": 0.03,
+    "coverage": "global, unclipped",
+    "rendering": "Unclipped overview polygons can use stroke:true to draw coastlines; no duplicate kind=coast features are included in the overview.",
+    "minimumSourcePolygonAreaKm2": 5,
+    "bytes": 5089094,
+    "sha256": "ea59bbb5016e7fc436a2ef7e6cc5eb8fdc591b608f01a14fdc86b98a91cd2f5d"
+  },
+  "areas": {
+    "redsea": [
+      29,
+      8,
+      54,
+      33
+    ],
+    "gulf": [
+      47,
+      21,
+      61,
+      33
+    ],
+    "eastasia": [
+      109,
+      -1,
+      161,
+      56
+    ]
+  },
+  "note": "Original full-resolution vertices retained, clipped and rounded to five decimal degrees for display. GSHHG is based on historical source surveys; detail does not imply current shoreline accuracy or metre-scale positional accuracy. Display only; habitat and heatwave analysis grids are unchanged.",
+  "drawOrder": [
+    "L1 land",
+    "L2 water",
+    "L3 land",
+    "L4 water",
+    "coast"
+  ],
+  "rendering": "Fill polygons without stroke; draw kind=coast separately. Coast features use original boundaries, so tile clipping edges are not drawn as shorelines. Cache tiles and load only those intersecting the current view.",
+  "polygonVertices": 1199087,
+  "totalBytes": 52962263,
+  "tiles": [
+    {
+      "path": "tiles/28_8.geojson",
+      "bounds": [
+        28,
+        8,
+        32,
+        12
+      ],
+      "bytes": 204,
+      "sha256": "782453bf23de62bece060757254092ddc0ffbc0fa617914b3e4d3996539d95bc",
+      "features": 1
+    },
+    {
+      "path": "tiles/28_12.geojson",
+      "bounds": [
+        28,
+        12,
+        32,
+        16
+      ],
+      "bytes": 207,
+      "sha256": "046a58acacc58d2a93771d9523341e35f3e9c86d559e75e35e791f1769ca209a",
+      "features": 1
+    },
+    {
+      "path": "tiles/28_16.geojson",
+      "bounds": [
+        28,
+        16,
+        32,
+        20
+      ],
+      "bytes": 207,
+      "sha256": "241def6364a462d4ae6c4f4b44793e8cf18d2b4b8aaae108ace0babdce66e762",
+      "features": 1
+    },
+    {
+      "path": "tiles/28_20.geojson",
+      "bounds": [
+        28,
+        20,
+        32,
+        24
+      ],
+      "bytes": 35958,
+      "sha256": "dcbce8896740d88487b31c3f6adc5ea0fad2f36530ebf080963faa358da0137b",
+      "features": 3
+    },
+    {
+      "path": "tiles/28_24.geojson",
+      "bounds": [
+        28,
+        24,
+        32,
+        28
+      ],
+      "bytes": 5665,
+      "sha256": "2789fd6d186ae50e5ca12c787379656b2248b2e248e590391267eeb1993cdb0a",
+      "features": 7
+    },
+    {
+      "path": "tiles/28_28.geojson",
+      "bounds": [
+        28,
+        28,
+        32,
+        32
+      ],
+      "bytes": 517446,
+      "sha256": "fa6eab4e72a466bda636da9ec8710682211387ead9129f4cc276e91d1f6191ff",
+      "features": 788
+    },
+    {
+      "path": "tiles/32_8.geojson",
+      "bounds": [
+        32,
+        8,
+        36,
+        12
+      ],
+      "bytes": 12466,
+      "sha256": "83402d18dd0d6ebe85bc20fcf03b23f4912a042d82a3f2d7be5bfb3a2a487a53",
+      "features": 3
+    },
+    {
+      "path": "tiles/32_12.geojson",
+      "bounds": [
+        32,
+        12,
+        36,
+        16
+      ],
+      "bytes": 4660,
+      "sha256": "f88be46b3e23f14ae0f9b13e3e1739507118b78f83d7cdb20281a6e8d3c3f543",
+      "features": 3
+    },
+    {
+      "path": "tiles/32_16.geojson",
+      "bounds": [
+        32,
+        16,
+        36,
+        20
+      ],
+      "bytes": 207,
+      "sha256": "52bc30357888abff6f4952ded0f070a072cbdedc6633552c9731b77c1613b125",
+      "features": 1
+    },
+    {
+      "path": "tiles/32_20.geojson",
+      "bounds": [
+        32,
+        20,
+        36,
+        24
+      ],
+      "bytes": 170579,
+      "sha256": "82bc07b9263a0ce510a93be3e3eab8fdcd9edc76883fafb7d7c1fa013b30c3ab",
+      "features": 50
+    },
+    {
+      "path": "tiles/32_24.geojson",
+      "bounds": [
+        32,
+        24,
+        36,
+        28
+      ],
+      "bytes": 370828,
+      "sha256": "648abbd38118fc097e1b05c1f2248e3c3965628a38d7219f9c32fd0e95c0d3ff",
+      "features": 184
+    },
+    {
+      "path": "tiles/32_28.geojson",
+      "bounds": [
+        32,
+        28,
+        36,
+        32
+      ],
+      "bytes": 1083911,
+      "sha256": "8851d2b2c53c41044f6f753fd72d3e5d5666a0f893ce9fa2e32f3bd94e719f11",
+      "features": 644
+    },
+    {
+      "path": "tiles/32_32.geojson",
+      "bounds": [
+        32,
+        32,
+        36,
+        36
+      ],
+      "bytes": 39078,
+      "sha256": "dec03f95cd9580086fd038cb43b65f209a7340a7be7549b6887d789f9c171726",
+      "features": 4
+    },
+    {
+      "path": "tiles/36_8.geojson",
+      "bounds": [
+        36,
+        8,
+        40,
+        12
+      ],
+      "bytes": 26748,
+      "sha256": "7b91711d0d0c211a83fcad9537f122f1ffeb57ced0c0de6b4f4f9d6c6b0b6a97",
+      "features": 21
+    },
+    {
+      "path": "tiles/36_12.geojson",
+      "bounds": [
+        36,
+        12,
+        40,
+        16
+      ],
+      "bytes": 154533,
+      "sha256": "a77de12e5e655df6ce75cb034b10f93d42193b44c42271049816953c64d18dc5",
+      "features": 120
+    },
+    {
+      "path": "tiles/36_16.geojson",
+      "bounds": [
+        36,
+        16,
+        40,
+        20
+      ],
+      "bytes": 347940,
+      "sha256": "66d145fe7e46d2f6a80d6b078130b76779b16463877e2ff94ee77b45e9f2c1bf",
+      "features": 280
+    },
+    {
+      "path": "tiles/36_20.geojson",
+      "bounds": [
+        36,
+        20,
+        40,
+        24
+      ],
+      "bytes": 854820,
+      "sha256": "5ef7196ca8fd682be69148b643b2f9105e5a04f63e667e939979aa975f30e95c",
+      "features": 940
+    },
+    {
+      "path": "tiles/36_24.geojson",
+      "bounds": [
+        36,
+        24,
+        40,
+        28
+      ],
+      "bytes": 433651,
+      "sha256": "0b3c7ddb008eb964b28ecf06abc58f042046a6f8c79b887c2b0fbd071a34e2aa",
+      "features": 296
+    },
+    {
+      "path": "tiles/36_28.geojson",
+      "bounds": [
+        36,
+        28,
+        40,
+        32
+      ],
+      "bytes": 207,
+      "sha256": "506f6f08d3608a005d92411bf768473947605c04bb1f133bdd9d9d26c3f8485f",
+      "features": 1
+    },
+    {
+      "path": "tiles/36_32.geojson",
+      "bounds": [
+        36,
+        32,
+        40,
+        36
+      ],
+      "bytes": 207,
+      "sha256": "c30cc11fb064f60d8928055eda4bf34681747972c5f17d156b49d5526dce4405",
+      "features": 1
+    },
+    {
+      "path": "tiles/40_8.geojson",
+      "bounds": [
+        40,
+        8,
+        44,
+        12
+      ],
+      "bytes": 138595,
+      "sha256": "370f14c20d023da54974a6954e8023b51174b01dff27dfbe3e1940d6a7e1cacb",
+      "features": 56
+    },
+    {
+      "path": "tiles/40_12.geojson",
+      "bounds": [
+        40,
+        12,
+        44,
+        16
+      ],
+      "bytes": 883790,
+      "sha256": "9bda87125cae7037337be2b7bd46e04c6d404538862b8d6447bbc861f98fe5ee",
+      "features": 706
+    },
+    {
+      "path": "tiles/40_16.geojson",
+      "bounds": [
+        40,
+        16,
+        44,
+        20
+      ],
+      "bytes": 686069,
+      "sha256": "8ee288b255821428add170ad96df310d8a1786cfabf9bb6ccc29e0b18adb8528",
+      "features": 764
+    },
+    {
+      "path": "tiles/40_20.geojson",
+      "bounds": [
+        40,
+        20,
+        44,
+        24
+      ],
+      "bytes": 41665,
+      "sha256": "6c645c4f48b82b2903dd4d29b0a9df5c22fdcd14d6f15918f067b0f38bef8668",
+      "features": 26
+    },
+    {
+      "path": "tiles/40_24.geojson",
+      "bounds": [
+        40,
+        24,
+        44,
+        28
+      ],
+      "bytes": 207,
+      "sha256": "15eee2d53c304260c52083d8dc59cb17ad843caba27193eee1f6a45db9f3eb57",
+      "features": 1
+    },
+    {
+      "path": "tiles/40_28.geojson",
+      "bounds": [
+        40,
+        28,
+        44,
+        32
+      ],
+      "bytes": 207,
+      "sha256": "8fdd2298039d48fbcf165e701007d184362a654a141497296c98a2d8a00e7b32",
+      "features": 1
+    },
+    {
+      "path": "tiles/40_32.geojson",
+      "bounds": [
+        40,
+        32,
+        44,
+        36
+      ],
+      "bytes": 20262,
+      "sha256": "2adf39d91af19e4bfc1536d5e20612b2925e144501936cb6342b15173f0b119f",
+      "features": 3
+    },
+    {
+      "path": "tiles/44_8.geojson",
+      "bounds": [
+        44,
+        8,
+        48,
+        12
+      ],
+      "bytes": 109163,
+      "sha256": "ccbfaecbc5cb59cffd17d9056db93bbb5dc4ce767e9b78eb4b82bc51b8fd75fc",
+      "features": 8
+    },
+    {
+      "path": "tiles/44_12.geojson",
+      "bounds": [
+        44,
+        12,
+        48,
+        16
+      ],
+      "bytes": 136036,
+      "sha256": "5d085663572c8d8be7e5ecfa076b39c45cb62f658302c520cf925e772446d0fa",
+      "features": 30
+    },
+    {
+      "path": "tiles/44_16.geojson",
+      "bounds": [
+        44,
+        16,
+        48,
+        20
+      ],
+      "bytes": 207,
+      "sha256": "c939d23db2d10c92c22e7f3b8dfe997fb6977fa8d209f1f5a780024cdc25f20f",
+      "features": 1
+    },
+    {
+      "path": "tiles/44_20.geojson",
+      "bounds": [
+        44,
+        20,
+        48,
+        24
+      ],
+      "bytes": 207,
+      "sha256": "588c8cbf0463e86d03e40d6195937270e15480c8fb745a94a9fb4c117774dd93",
+      "features": 1
+    },
+    {
+      "path": "tiles/44_24.geojson",
+      "bounds": [
+        44,
+        24,
+        48,
+        28
+      ],
+      "bytes": 207,
+      "sha256": "a0413c920eea06cbf7174b535e94c5dedc36d0f9fca0f4fcc0f934a2c5c3e608",
+      "features": 1
+    },
+    {
+      "path": "tiles/44_28.geojson",
+      "bounds": [
+        44,
+        28,
+        48,
+        32
+      ],
+      "bytes": 46909,
+      "sha256": "24b796e1b6f0c8d969cc332e328ab765d206711c23b5e58b84736eb9c0989d07",
+      "features": 32
+    },
+    {
+      "path": "tiles/44_32.geojson",
+      "bounds": [
+        44,
+        32,
+        48,
+        36
+      ],
+      "bytes": 47654,
+      "sha256": "b9c971803a61b3bf3e631586b37a10b9c5ad957dcf5f6c045eff19f1371c1bc8",
+      "features": 3
+    },
+    {
+      "path": "tiles/48_8.geojson",
+      "bounds": [
+        48,
+        8,
+        52,
+        12
+      ],
+      "bytes": 219419,
+      "sha256": "53d4586a7e7876f0272489f95a5e6b6fe6d93522a19460a99e5a231ddebf1efa",
+      "features": 42
+    },
+    {
+      "path": "tiles/48_12.geojson",
+      "bounds": [
+        48,
+        12,
+        52,
+        16
+      ],
+      "bytes": 125606,
+      "sha256": "9d9efe8f4fb18f61f949cfb0a35928408d1f8a0b32f84540006ec1b52079b2bb",
+      "features": 10
+    },
+    {
+      "path": "tiles/48_16.geojson",
+      "bounds": [
+        48,
+        16,
+        52,
+        20
+      ],
+      "bytes": 207,
+      "sha256": "25f5a52cc64b33ba74a9c36f1dcf27e504a09c14142110830aae0834eda98382",
+      "features": 1
+    },
+    {
+      "path": "tiles/48_20.geojson",
+      "bounds": [
+        48,
+        20,
+        52,
+        24
+      ],
+      "bytes": 9883,
+      "sha256": "8393892106858298201e269c49901d935e5d6d90f70f2c198885a0bf08793b24",
+      "features": 2
+    },
+    {
+      "path": "tiles/48_24.geojson",
+      "bounds": [
+        48,
+        24,
+        52,
+        28
+      ],
+      "bytes": 807989,
+      "sha256": "ee25d0e622f5c35d1198d97130f5c32daea785bafa1f902d8db54f3231d5f660",
+      "features": 426
+    },
+    {
+      "path": "tiles/48_28.geojson",
+      "bounds": [
+        48,
+        28,
+        52,
+        32
+      ],
+      "bytes": 582611,
+      "sha256": "0f0ed92aa802cbc0aa8cf753da5bb8c9fddc31e4c080b8431e6fffa40a000afc",
+      "features": 164
+    },
+    {
+      "path": "tiles/48_32.geojson",
+      "bounds": [
+        48,
+        32,
+        52,
+        36
+      ],
+      "bytes": 12727,
+      "sha256": "0c28df47b40ffd57c0ad0028fbaa2b64764cacde4348ac6739c15a0457de6e1d",
+      "features": 5
+    },
+    {
+      "path": "tiles/52_12.geojson",
+      "bounds": [
+        52,
+        12,
+        56,
+        16
+      ],
+      "bytes": 90767,
+      "sha256": "cdad79333df09f012592345ec47cdd6b820dcdd2fc0e91b627d3538979c3bfc0",
+      "features": 16
+    },
+    {
+      "path": "tiles/52_16.geojson",
+      "bounds": [
+        52,
+        16,
+        56,
+        20
+      ],
+      "bytes": 52938,
+      "sha256": "69280385f06dac58ebdc3ea38329f3bf92b92c2e9cf495605734bdda8c285247",
+      "features": 2
+    },
+    {
+      "path": "tiles/52_20.geojson",
+      "bounds": [
+        52,
+        20,
+        56,
+        24
+      ],
+      "bytes": 15628,
+      "sha256": "4e49560f066a229a98881c9e3312e5e2e3ddbec6190ca178bbb37be14c7cbc86",
+      "features": 8
+    },
+    {
+      "path": "tiles/52_24.geojson",
+      "bounds": [
+        52,
+        24,
+        56,
+        28
+      ],
+      "bytes": 914990,
+      "sha256": "82c6d6f40e3f48a91a8b5368aaed5fa8c09e55427952d566b6f37837da0b60f2",
+      "features": 484
+    },
+    {
+      "path": "tiles/52_28.geojson",
+      "bounds": [
+        52,
+        28,
+        56,
+        32
+      ],
+      "bytes": 207,
+      "sha256": "7b2c4bb3c09a7d17ac139d63b567ab94e147967a1247fea08acca8e39b550886",
+      "features": 1
+    },
+    {
+      "path": "tiles/52_32.geojson",
+      "bounds": [
+        52,
+        32,
+        56,
+        36
+      ],
+      "bytes": 219,
+      "sha256": "8f23bf8d448ada1e20ec8cda13ba72840124314827601e0a4858ead283a71da3",
+      "features": 1
+    },
+    {
+      "path": "tiles/56_20.geojson",
+      "bounds": [
+        56,
+        20,
+        60,
+        24
+      ],
+      "bytes": 162645,
+      "sha256": "144e96894803dd5c9549f2755b347d3b11afff7af6046bd2b290137f1b42f07f",
+      "features": 48
+    },
+    {
+      "path": "tiles/56_24.geojson",
+      "bounds": [
+        56,
+        24,
+        60,
+        28
+      ],
+      "bytes": 566701,
+      "sha256": "dd87e31a91e4ea88b649480a4c074489f3dc6e63bc39729b914e99e884430a00",
+      "features": 164
+    },
+    {
+      "path": "tiles/56_28.geojson",
+      "bounds": [
+        56,
+        28,
+        60,
+        32
+      ],
+      "bytes": 207,
+      "sha256": "50c78fb5dfc3c0c46293801102f5e973c8448a746063e2145eef0c4babe0af2e",
+      "features": 1
+    },
+    {
+      "path": "tiles/56_32.geojson",
+      "bounds": [
+        56,
+        32,
+        60,
+        36
+      ],
+      "bytes": 207,
+      "sha256": "2e3f12d677b80f09b8df1b9b0e3cf2aa9098176dc965036f71c271a9e38d5e20",
+      "features": 1
+    },
+    {
+      "path": "tiles/60_24.geojson",
+      "bounds": [
+        60,
+        24,
+        64,
+        28
+      ],
+      "bytes": 46878,
+      "sha256": "2f35a17846240fdeaf597584fa050b600dd2724e76143fe074b03a0943051bfe",
+      "features": 14
+    },
+    {
+      "path": "tiles/60_28.geojson",
+      "bounds": [
+        60,
+        28,
+        64,
+        32
+      ],
+      "bytes": 207,
+      "sha256": "a46c365524276f0fac044ef5acd134ad177f7a3a42002e1432e263cb4cd837dd",
+      "features": 1
+    },
+    {
+      "path": "tiles/60_32.geojson",
+      "bounds": [
+        60,
+        32,
+        64,
+        36
+      ],
+      "bytes": 207,
+      "sha256": "d891f6b004a7f207d577c7d06a0379b7168f4ef1805623a27cf0748e2776a762",
+      "features": 1
+    },
+    {
+      "path": "tiles/108_-4.geojson",
+      "bounds": [
+        108,
+        -4,
+        112,
+        0
+      ],
+      "bytes": 127979,
+      "sha256": "46814ac35c0ec450cd3d7c5949f20c034627166826073f7ced8479aa3d4a6ba5",
+      "features": 42
+    },
+    {
+      "path": "tiles/108_0.geojson",
+      "bounds": [
+        108,
+        0,
+        112,
+        4
+      ],
+      "bytes": 296583,
+      "sha256": "85e3fd4e3d776ecfa3fb45bd83294cdae90e1d9eece3e375d51f192d6aad7eab",
+      "features": 58
+    },
+    {
+      "path": "tiles/108_8.geojson",
+      "bounds": [
+        108,
+        8,
+        112,
+        12
+      ],
+      "bytes": 66367,
+      "sha256": "d7607e27b957c073c60c83e8cad9b04241f3f674addff0ddaf691bdc197cc463",
+      "features": 36
+    },
+    {
+      "path": "tiles/108_12.geojson",
+      "bounds": [
+        108,
+        12,
+        112,
+        16
+      ],
+      "bytes": 326013,
+      "sha256": "dc6a1c0b81654c366ad470b0738b8151005df2c94e947fbd152e91aa86dc5ee3",
+      "features": 230
+    },
+    {
+      "path": "tiles/108_16.geojson",
+      "bounds": [
+        108,
+        16,
+        112,
+        20
+      ],
+      "bytes": 351338,
+      "sha256": "180bf500b1ba9d46c67a7ee0126be736381e6f954ae3dccfa6e3da33e481c257",
+      "features": 260
+    },
+    {
+      "path": "tiles/108_20.geojson",
+      "bounds": [
+        108,
+        20,
+        112,
+        24
+      ],
+      "bytes": 767892,
+      "sha256": "5712f7a5668f0532b7541dde1c96f850144150ee8e6d4e4a9f013ba4739a5254",
+      "features": 292
+    },
+    {
+      "path": "tiles/108_24.geojson",
+      "bounds": [
+        108,
+        24,
+        112,
+        28
+      ],
+      "bytes": 212,
+      "sha256": "2538ebb80d3c7d225866023a1fd5885513b07e40b183640332ed714868904c13",
+      "features": 1
+    },
+    {
+      "path": "tiles/108_28.geojson",
+      "bounds": [
+        108,
+        28,
+        112,
+        32
+      ],
+      "bytes": 1453,
+      "sha256": "1c16328561f6398733a78321d3081b2d8df3f15eb1c4877f46ce8aef76581afd",
+      "features": 3
+    },
+    {
+      "path": "tiles/108_32.geojson",
+      "bounds": [
+        108,
+        32,
+        112,
+        36
+      ],
+      "bytes": 8071,
+      "sha256": "881e80e132799357205dd4d021c35718be58a3a6bbe13eda3c0fa0f6d7de013c",
+      "features": 11
+    },
+    {
+      "path": "tiles/108_36.geojson",
+      "bounds": [
+        108,
+        36,
+        112,
+        40
+      ],
+      "bytes": 3087,
+      "sha256": "7f5ae3a7897d3137ae6ff12b869a487c53cf7789cc25eafc0e22c0fc35a35f69",
+      "features": 5
+    },
+    {
+      "path": "tiles/108_40.geojson",
+      "bounds": [
+        108,
+        40,
+        112,
+        44
+      ],
+      "bytes": 1173,
+      "sha256": "0b3876d2a0a896fd4793d31106221b20ae80ab6273d16c66df43de76aa1db606",
+      "features": 3
+    },
+    {
+      "path": "tiles/108_44.geojson",
+      "bounds": [
+        108,
+        44,
+        112,
+        48
+      ],
+      "bytes": 212,
+      "sha256": "27a449347392e1da669c11b2b1544fe7785605b1884aaabd6e4ac1fd9306ed4d",
+      "features": 1
+    },
+    {
+      "path": "tiles/108_48.geojson",
+      "bounds": [
+        108,
+        48,
+        112,
+        52
+      ],
+      "bytes": 212,
+      "sha256": "a6e81a5a4bd34dfd9b2b8f0662cf791245dc07240e21b51e7cda51f83a66863e",
+      "features": 1
+    },
+    {
+      "path": "tiles/108_52.geojson",
+      "bounds": [
+        108,
+        52,
+        112,
+        56
+      ],
+      "bytes": 54632,
+      "sha256": "f491064fc5544ee89f9478514a95aa9ac917fcaffeb0f9b2ba6d517aec84fa00",
+      "features": 25
+    },
+    {
+      "path": "tiles/112_-4.geojson",
+      "bounds": [
+        112,
+        -4,
+        116,
+        0
+      ],
+      "bytes": 209,
+      "sha256": "51e97d414c65e527b7df9351be9acc230e7256b1ccb972383bd05d661a3e1c62",
+      "features": 1
+    },
+    {
+      "path": "tiles/112_0.geojson",
+      "bounds": [
+        112,
+        0,
+        116,
+        4
+      ],
+      "bytes": 66421,
+      "sha256": "29403e43f5262b9e6641d67f531b3d8589f8e42d6faad3c0dc0ad6ee6a807bd7",
+      "features": 26
+    },
+    {
+      "path": "tiles/112_4.geojson",
+      "bounds": [
+        112,
+        4,
+        116,
+        8
+      ],
+      "bytes": 191611,
+      "sha256": "3d0ad651f8953a7a5203cf3b33767cfff41ad02aae6f0143435d90ca2a378593",
+      "features": 90
+    },
+    {
+      "path": "tiles/112_8.geojson",
+      "bounds": [
+        112,
+        8,
+        116,
+        12
+      ],
+      "bytes": 34206,
+      "sha256": "efc1a1d89cffd89e5f65d3431d1bf11dda192048b1ca7990c94acebf9ccec84f",
+      "features": 84
+    },
+    {
+      "path": "tiles/112_16.geojson",
+      "bounds": [
+        112,
+        16,
+        116,
+        20
+      ],
+      "bytes": 10967,
+      "sha256": "14bdc05b853e31af56daa892252248d243a5ecf38ceef7e3083d7818d36ff699",
+      "features": 20
+    },
+    {
+      "path": "tiles/112_20.geojson",
+      "bounds": [
+        112,
+        20,
+        116,
+        24
+      ],
+      "bytes": 1162610,
+      "sha256": "758f610f3dad476e0dec1fcfd03b6fa3d9255bbb5d4510d213ceb8647bf67448",
+      "features": 844
+    },
+    {
+      "path": "tiles/112_24.geojson",
+      "bounds": [
+        112,
+        24,
+        116,
+        28
+      ],
+      "bytes": 2776,
+      "sha256": "83c27962abff093914b544f7fb9b8792f7ffb05a0350fda317ab23a09cc88dec",
+      "features": 3
+    },
+    {
+      "path": "tiles/112_28.geojson",
+      "bounds": [
+        112,
+        28,
+        116,
+        32
+      ],
+      "bytes": 194055,
+      "sha256": "eb30684cc33ca1c0776792690dbc8c43f1394484434b7b8f5b9b6288dd4cd9d9",
+      "features": 55
+    },
+    {
+      "path": "tiles/112_32.geojson",
+      "bounds": [
+        112,
+        32,
+        116,
+        36
+      ],
+      "bytes": 7150,
+      "sha256": "748318a4c3b9bc3c46565638dd9e8d212cc8ae74fc9afdd1560533dff9818087",
+      "features": 5
+    },
+    {
+      "path": "tiles/112_36.geojson",
+      "bounds": [
+        112,
+        36,
+        116,
+        40
+      ],
+      "bytes": 6979,
+      "sha256": "42f0d76bfcb7c6d3dd984f174d451a4fe1da830692920822fc46935eab78aca3",
+      "features": 7
+    },
+    {
+      "path": "tiles/112_40.geojson",
+      "bounds": [
+        112,
+        40,
+        116,
+        44
+      ],
+      "bytes": 19995,
+      "sha256": "7ec106a941020728812ee71123c6a63f51c7f986fd5a0c5a2cc81e49c5d6924c",
+      "features": 15
+    },
+    {
+      "path": "tiles/112_44.geojson",
+      "bounds": [
+        112,
+        44,
+        116,
+        48
+      ],
+      "bytes": 212,
+      "sha256": "cefa7c96b9f1518dbcc30c3ae5dcfd46433c4aa05a2ef72f9b873cdbf8cb4e7a",
+      "features": 1
+    },
+    {
+      "path": "tiles/112_48.geojson",
+      "bounds": [
+        112,
+        48,
+        116,
+        52
+      ],
+      "bytes": 18874,
+      "sha256": "9381969238b711f2b8605ecf7b6366a50154912757e53df41386d55ff8d4cc29",
+      "features": 29
+    },
+    {
+      "path": "tiles/112_52.geojson",
+      "bounds": [
+        112,
+        52,
+        116,
+        56
+      ],
+      "bytes": 19977,
+      "sha256": "0e56abd681c343cfbc086487b9c79a1f336d8f85028c530d2ab46d3a04714dfc",
+      "features": 21
+    },
+    {
+      "path": "tiles/116_-4.geojson",
+      "bounds": [
+        116,
+        -4,
+        120,
+        0
+      ],
+      "bytes": 212420,
+      "sha256": "381ccbdb01b11ff059661b55f720aaa43b12df76b6c533ee716c2bcc7fe8daa6",
+      "features": 64
+    },
+    {
+      "path": "tiles/116_0.geojson",
+      "bounds": [
+        116,
+        0,
+        120,
+        4
+      ],
+      "bytes": 654689,
+      "sha256": "66690718f46a0c7690d9a89d391ea994b2ffc99d3e1b24c3f857ed365e9c5ebb",
+      "features": 330
+    },
+    {
+      "path": "tiles/116_4.geojson",
+      "bounds": [
+        116,
+        4,
+        120,
+        8
+      ],
+      "bytes": 1145073,
+      "sha256": "e645d3082e17e2964f4fbf4ccd8bc316a2b4afb85203396cf88cc87a17f8adcb",
+      "features": 846
+    },
+    {
+      "path": "tiles/116_8.geojson",
+      "bounds": [
+        116,
+        8,
+        120,
+        12
+      ],
+      "bytes": 1041664,
+      "sha256": "14d778d652307c02fcdf8132c9fefe29d97491e672f6cc8627a326742255104b",
+      "features": 948
+    },
+    {
+      "path": "tiles/116_12.geojson",
+      "bounds": [
+        116,
+        12,
+        120,
+        16
+      ],
+      "bytes": 113050,
+      "sha256": "5b833a77214e60d7c44e9dd9d9d93cf70d50c833df51bee9d3ea09f598212ffc",
+      "features": 110
+    },
+    {
+      "path": "tiles/116_16.geojson",
+      "bounds": [
+        116,
+        16,
+        120,
+        20
+      ],
+      "bytes": 50810,
+      "sha256": "f917ef2d279863cc5811b8382e25c1c526d57d07543658e8bac21808894bb5be",
+      "features": 38
+    },
+    {
+      "path": "tiles/116_20.geojson",
+      "bounds": [
+        116,
+        20,
+        120,
+        24
+      ],
+      "bytes": 525761,
+      "sha256": "193ac82d9e3a76d63ef181d7fd37b0dafba918a6e135037aa1db7ffee0b9e8fb",
+      "features": 544
+    },
+    {
+      "path": "tiles/116_24.geojson",
+      "bounds": [
+        116,
+        24,
+        120,
+        28
+      ],
+      "bytes": 1530715,
+      "sha256": "c1997c5175769d6a21545c0a8d54a61bc22389b066495515f014cb6e83d71bb8",
+      "features": 2072
+    },
+    {
+      "path": "tiles/116_28.geojson",
+      "bounds": [
+        116,
+        28,
+        120,
+        32
+      ],
+      "bytes": 282446,
+      "sha256": "58861e0bc55f383213cd1b7ac64e14f87eb2974717715e68fd8042f53cde9b5c",
+      "features": 87
+    },
+    {
+      "path": "tiles/116_32.geojson",
+      "bounds": [
+        116,
+        32,
+        120,
+        36
+      ],
+      "bytes": 254527,
+      "sha256": "0519da9d634a4311693edaa83bd63feec6cf3345089c8bbdad9bb8d943da1fbf",
+      "features": 66
+    },
+    {
+      "path": "tiles/116_36.geojson",
+      "bounds": [
+        116,
+        36,
+        120,
+        40
+      ],
+      "bytes": 295399,
+      "sha256": "024583f85af46043e91ca54d8a492f2cf1e0a069240f26f97ed6300cc64c94c5",
+      "features": 32
+    },
+    {
+      "path": "tiles/116_40.geojson",
+      "bounds": [
+        116,
+        40,
+        120,
+        44
+      ],
+      "bytes": 16561,
+      "sha256": "a09deab500d8f10de82c06af823bf37e19f7bdc06e1a6e57b5371fc1129c07e6",
+      "features": 10
+    },
+    {
+      "path": "tiles/116_44.geojson",
+      "bounds": [
+        116,
+        44,
+        120,
+        48
+      ],
+      "bytes": 17370,
+      "sha256": "b195824501c06538e218f2966baf09156c0aaaa22f91e0da60c52eec98d72f09",
+      "features": 11
+    },
+    {
+      "path": "tiles/116_48.geojson",
+      "bounds": [
+        116,
+        48,
+        120,
+        52
+      ],
+      "bytes": 34573,
+      "sha256": "95b98384c5de8806354d35d1772a7cbc64ad400792d6c374d58f8ea0ebe96961",
+      "features": 17
+    },
+    {
+      "path": "tiles/116_52.geojson",
+      "bounds": [
+        116,
+        52,
+        120,
+        56
+      ],
+      "bytes": 212,
+      "sha256": "a6da6c781cb3bdd2f21eb6c0b5b36c177d4f8cdcce65649cf9786c3f99fe68bd",
+      "features": 1
+    },
+    {
+      "path": "tiles/120_-4.geojson",
+      "bounds": [
+        120,
+        -4,
+        124,
+        0
+      ],
+      "bytes": 415160,
+      "sha256": "959a066533e9d0ace2f301a36724b675e5f93f0a65450452728924fc54128825",
+      "features": 264
+    },
+    {
+      "path": "tiles/120_0.geojson",
+      "bounds": [
+        120,
+        0,
+        124,
+        4
+      ],
+      "bytes": 464321,
+      "sha256": "687d88afc5f25bf5ce0d55e8d818a2ca5f34ca9fde67abcd4cbbd654dde3f86a",
+      "features": 256
+    },
+    {
+      "path": "tiles/120_4.geojson",
+      "bounds": [
+        120,
+        4,
+        124,
+        8
+      ],
+      "bytes": 1232592,
+      "sha256": "dfe72b40b66ae92cf81a2b113bd90ae2df4ce56d9d88c720a8d65b822858d1e7",
+      "features": 1518
+    },
+    {
+      "path": "tiles/120_8.geojson",
+      "bounds": [
+        120,
+        8,
+        124,
+        12
+      ],
+      "bytes": 1327966,
+      "sha256": "1054ee65ce1592ba65c14af300c60d682f31af449e53d92243fffc83e3b3043a",
+      "features": 950
+    },
+    {
+      "path": "tiles/120_12.geojson",
+      "bounds": [
+        120,
+        12,
+        124,
+        16
+      ],
+      "bytes": 1822238,
+      "sha256": "20c649b4c7e148703c9fb75baffca209c27267e51b958a71ac20a48e2df86f24",
+      "features": 1062
+    },
+    {
+      "path": "tiles/120_16.geojson",
+      "bounds": [
+        120,
+        16,
+        124,
+        20
+      ],
+      "bytes": 418228,
+      "sha256": "23807f711c9fcaa75e1dbdfea0bb423eceb6738a3d6bfeab60d11a7b52d1bb67",
+      "features": 166
+    },
+    {
+      "path": "tiles/120_20.geojson",
+      "bounds": [
+        120,
+        20,
+        124,
+        24
+      ],
+      "bytes": 305775,
+      "sha256": "78578a03f9c7ece1ef8b35590c2bc1a27a29c8249b6454c533e35abf469eed9d",
+      "features": 150
+    },
+    {
+      "path": "tiles/120_24.geojson",
+      "bounds": [
+        120,
+        24,
+        124,
+        28
+      ],
+      "bytes": 776998,
+      "sha256": "3f964d6b82823f91c8c9f0062388b8e97db4cbf086045b89473b42656759bc12",
+      "features": 904
+    },
+    {
+      "path": "tiles/120_28.geojson",
+      "bounds": [
+        120,
+        28,
+        124,
+        32
+      ],
+      "bytes": 1970910,
+      "sha256": "628ccacd39221747627022b34bb72151edf6f5ac043405910a74da093069d462",
+      "features": 2170
+    },
+    {
+      "path": "tiles/120_32.geojson",
+      "bounds": [
+        120,
+        32,
+        124,
+        36
+      ],
+      "bytes": 228726,
+      "sha256": "f7266c83367b69bf6cc7507ffa0b14f132f8ed9e8240e5724c1f1f9a4a1631f0",
+      "features": 52
+    },
+    {
+      "path": "tiles/120_36.geojson",
+      "bounds": [
+        120,
+        36,
+        124,
+        40
+      ],
+      "bytes": 1081607,
+      "sha256": "dc09023a873ca027eb13d486a6147066bb176044d4ede584f394eaff130a8589",
+      "features": 522
+    },
+    {
+      "path": "tiles/120_40.geojson",
+      "bounds": [
+        120,
+        40,
+        124,
+        44
+      ],
+      "bytes": 179581,
+      "sha256": "72dc933110ccc83258266780759b513fe215a173ac7db095ab91a2f8994bca00",
+      "features": 26
+    },
+    {
+      "path": "tiles/120_44.geojson",
+      "bounds": [
+        120,
+        44,
+        124,
+        48
+      ],
+      "bytes": 4813,
+      "sha256": "66dda76e2d595390fb0548ff0f23a6f86cf6397b1f369a7e241be50b621b506b",
+      "features": 5
+    },
+    {
+      "path": "tiles/120_48.geojson",
+      "bounds": [
+        120,
+        48,
+        124,
+        52
+      ],
+      "bytes": 212,
+      "sha256": "1b39530b13cbc2da207eeeebfcc75c939b7070724dd2861a7b2cc5f507f4e968",
+      "features": 1
+    },
+    {
+      "path": "tiles/120_52.geojson",
+      "bounds": [
+        120,
+        52,
+        124,
+        56
+      ],
+      "bytes": 212,
+      "sha256": "b5aff22e800ad73ce1053f5a2a143fbff9f3e7c255c66c15158f58c49b3c3325",
+      "features": 1
+    },
+    {
+      "path": "tiles/124_-4.geojson",
+      "bounds": [
+        124,
+        -4,
+        128,
+        0
+      ],
+      "bytes": 335171,
+      "sha256": "28e70b0b1589a0aff0dde64b0613d69258206cd26750f46c46213f90a96f45d4",
+      "features": 222
+    },
+    {
+      "path": "tiles/124_0.geojson",
+      "bounds": [
+        124,
+        0,
+        128,
+        4
+      ],
+      "bytes": 701124,
+      "sha256": "7f13ba8176a34a73e28ff24e3b2706b1ae31911703a79d3ce954c931ae0b7bcb",
+      "features": 408
+    },
+    {
+      "path": "tiles/124_4.geojson",
+      "bounds": [
+        124,
+        4,
+        128,
+        8
+      ],
+      "bytes": 478351,
+      "sha256": "98364068aef254559f4574102a2668ea686dd0ede1a2bbd4d8642dd3bd620068",
+      "features": 180
+    },
+    {
+      "path": "tiles/124_8.geojson",
+      "bounds": [
+        124,
+        8,
+        128,
+        12
+      ],
+      "bytes": 1636726,
+      "sha256": "44bdc41927bf1ea5cda76b4dbdf6bb7152e3480a4050696d399571eddd874061",
+      "features": 1380
+    },
+    {
+      "path": "tiles/124_12.geojson",
+      "bounds": [
+        124,
+        12,
+        128,
+        16
+      ],
+      "bytes": 387530,
+      "sha256": "92b098d3f1fe37f40e43923eb5a777db2240e61c1b2a573bc901909a05fcc737",
+      "features": 270
+    },
+    {
+      "path": "tiles/124_24.geojson",
+      "bounds": [
+        124,
+        24,
+        128,
+        28
+      ],
+      "bytes": 329896,
+      "sha256": "82ec07cc8f54c3bbf673a5b04316b95444f0d1f674502ffd3e3eaf20b9a27282",
+      "features": 318
+    },
+    {
+      "path": "tiles/124_32.geojson",
+      "bounds": [
+        124,
+        32,
+        128,
+        36
+      ],
+      "bytes": 2296347,
+      "sha256": "a0404aac4e655a68421f0f5ffa928cad672ed030d1acf100842d8a7306b44b83",
+      "features": 2180
+    },
+    {
+      "path": "tiles/124_36.geojson",
+      "bounds": [
+        124,
+        36,
+        128,
+        40
+      ],
+      "bytes": 1849706,
+      "sha256": "b2fa7b6f7bac3a39424e1a068d30a8cd823629ae8990b739a7508fb68ad7a852",
+      "features": 1574
+    },
+    {
+      "path": "tiles/124_40.geojson",
+      "bounds": [
+        124,
+        40,
+        128,
+        44
+      ],
+      "bytes": 44650,
+      "sha256": "8844a3372058e71de94b702739593bf8192e3759ff3beef93a4d2aed4a2d0377",
+      "features": 18
+    },
+    {
+      "path": "tiles/124_44.geojson",
+      "bounds": [
+        124,
+        44,
+        128,
+        48
+      ],
+      "bytes": 10699,
+      "sha256": "b0427bd8e23415ddd783e2569e0aaa3e95c120b91934950ea2982da9c2312c97",
+      "features": 9
+    },
+    {
+      "path": "tiles/124_48.geojson",
+      "bounds": [
+        124,
+        48,
+        128,
+        52
+      ],
+      "bytes": 212,
+      "sha256": "c745c1d3ab2095f1dd83109b852e8ac8b82997c94c88f33edb20564ef2e1cc94",
+      "features": 1
+    },
+    {
+      "path": "tiles/124_52.geojson",
+      "bounds": [
+        124,
+        52,
+        128,
+        56
+      ],
+      "bytes": 212,
+      "sha256": "64cb84cc2889e8cb55ade13006be2e15072eccce2e74c4166e5670939dae74c0",
+      "features": 1
+    },
+    {
+      "path": "tiles/128_-4.geojson",
+      "bounds": [
+        128,
+        -4,
+        132,
+        0
+      ],
+      "bytes": 861183,
+      "sha256": "a5466a6e74a590c72c39350c25620d0ef172763b4a01c05181f816de013d96a9",
+      "features": 738
+    },
+    {
+      "path": "tiles/128_0.geojson",
+      "bounds": [
+        128,
+        0,
+        132,
+        4
+      ],
+      "bytes": 368816,
+      "sha256": "c9d9e832d248f7be1650ee6f748db8b55409f1017cf4ddee16708e3811e6c879",
+      "features": 314
+    },
+    {
+      "path": "tiles/128_4.geojson",
+      "bounds": [
+        128,
+        4,
+        132,
+        8
+      ],
+      "bytes": 933,
+      "sha256": "7b30327f7f4702f6cf11dbd1dc28d2d4eaa1ff5b8fb4d82107be3466aaf71c55",
+      "features": 2
+    },
+    {
+      "path": "tiles/128_24.geojson",
+      "bounds": [
+        128,
+        24,
+        132,
+        28
+      ],
+      "bytes": 113896,
+      "sha256": "dbbb3dabbf89130b6e56ebf1ad519473bcdb0e5f8820ce755c814d0d10c419d4",
+      "features": 70
+    },
+    {
+      "path": "tiles/128_28.geojson",
+      "bounds": [
+        128,
+        28,
+        132,
+        32
+      ],
+      "bytes": 663390,
+      "sha256": "719e4031152dc437be40ca8be913c5d3096cfca327d0e6193b6f29b114fe7dd4",
+      "features": 424
+    },
+    {
+      "path": "tiles/128_32.geojson",
+      "bounds": [
+        128,
+        32,
+        132,
+        36
+      ],
+      "bytes": 2722924,
+      "sha256": "802c2faf5d232442358359d174846c590bbfa4882bb1135f70be3c56503dcd8e",
+      "features": 2054
+    },
+    {
+      "path": "tiles/128_36.geojson",
+      "bounds": [
+        128,
+        36,
+        132,
+        40
+      ],
+      "bytes": 146372,
+      "sha256": "061546ae0af0c9e82c06e66a7ce295050fad8a936047ef4726d2dded186ca3db",
+      "features": 58
+    },
+    {
+      "path": "tiles/128_40.geojson",
+      "bounds": [
+        128,
+        40,
+        132,
+        44
+      ],
+      "bytes": 449759,
+      "sha256": "2b87d2b3694f175320ffb9c98ce49615b5509f250da37e142d9689fbaabb4110",
+      "features": 172
+    },
+    {
+      "path": "tiles/128_44.geojson",
+      "bounds": [
+        128,
+        44,
+        132,
+        48
+      ],
+      "bytes": 36181,
+      "sha256": "085d2a1010819ebffdf4351b9982c18766ab645a1c5993d14c8745f9a14144eb",
+      "features": 7
+    },
+    {
+      "path": "tiles/128_48.geojson",
+      "bounds": [
+        128,
+        48,
+        132,
+        52
+      ],
+      "bytes": 212,
+      "sha256": "a6dfb978939b675e1906f4d4d94eda26213af76514a210ebfabf724642d0e0b9",
+      "features": 1
+    },
+    {
+      "path": "tiles/128_52.geojson",
+      "bounds": [
+        128,
+        52,
+        132,
+        56
+      ],
+      "bytes": 212,
+      "sha256": "d367a29e4fc23ab189ae28728f2b11fcc0b293bf44622c5f9a23665df60bcc0f",
+      "features": 1
+    },
+    {
+      "path": "tiles/132_-4.geojson",
+      "bounds": [
+        132,
+        -4,
+        136,
+        0
+      ],
+      "bytes": 186940,
+      "sha256": "90082ce84232a8f65bb5e8b5a73f44646df9c2b7c964a08c3b2301f2513e67fe",
+      "features": 86
+    },
+    {
+      "path": "tiles/132_4.geojson",
+      "bounds": [
+        132,
+        4,
+        136,
+        8
+      ],
+      "bytes": 169299,
+      "sha256": "a48278e7d7cd22017ff4c91879e588742027ee3c6af50a93b068d2ca9071492a",
+      "features": 208
+    },
+    {
+      "path": "tiles/132_8.geojson",
+      "bounds": [
+        132,
+        8,
+        136,
+        12
+      ],
+      "bytes": 3879,
+      "sha256": "0d5a5e0a4eeba58c3e2b88227fe7e478d724922a3324b7fb848718a1ff93e721",
+      "features": 8
+    },
+    {
+      "path": "tiles/132_32.geojson",
+      "bounds": [
+        132,
+        32,
+        136,
+        36
+      ],
+      "bytes": 2105129,
+      "sha256": "abc03ec9b42c095800b6f6ab78030e969b208eb6df75e5c7aec9048d859c3db5",
+      "features": 1564
+    },
+    {
+      "path": "tiles/132_36.geojson",
+      "bounds": [
+        132,
+        36,
+        136,
+        40
+      ],
+      "bytes": 77441,
+      "sha256": "edf72165a485e08474ee3d6bc5ccf749429baaaef6525663bdac44f0d18d434f",
+      "features": 52
+    },
+    {
+      "path": "tiles/132_40.geojson",
+      "bounds": [
+        132,
+        40,
+        136,
+        44
+      ],
+      "bytes": 238238,
+      "sha256": "fd4d47202e019e6d7e0df481e5c6d772ac49afa60239fb7c2773f047264c2742",
+      "features": 42
+    },
+    {
+      "path": "tiles/132_44.geojson",
+      "bounds": [
+        132,
+        44,
+        136,
+        48
+      ],
+      "bytes": 72829,
+      "sha256": "b03d07d10cbfa1c98a7504d0938c9471eafb030cd20934109225c21f83685e79",
+      "features": 12
+    },
+    {
+      "path": "tiles/132_48.geojson",
+      "bounds": [
+        132,
+        48,
+        136,
+        52
+      ],
+      "bytes": 55517,
+      "sha256": "0d8873748ef92f6e49669b7ac8f092fe410a0e950cebe1de88029abb58dbc9fa",
+      "features": 19
+    },
+    {
+      "path": "tiles/132_52.geojson",
+      "bounds": [
+        132,
+        52,
+        136,
+        56
+      ],
+      "bytes": 37481,
+      "sha256": "3c082d0e963634372bb6cc77ae9d883d536a332e1ac1f78e60611d38951e22d8",
+      "features": 8
+    },
+    {
+      "path": "tiles/136_-4.geojson",
+      "bounds": [
+        136,
+        -4,
+        140,
+        0
+      ],
+      "bytes": 8943,
+      "sha256": "2666095b395999566dd0507168fa0c984ab3316f5a8a8cdbf739ce0522a2681f",
+      "features": 2
+    },
+    {
+      "path": "tiles/136_8.geojson",
+      "bounds": [
+        136,
+        8,
+        140,
+        12
+      ],
+      "bytes": 63860,
+      "sha256": "3e6efe0ec611250e0320df000d2ec802754e379b7f3868ae9af9852e9746a3d3",
+      "features": 104
+    },
+    {
+      "path": "tiles/136_20.geojson",
+      "bounds": [
+        136,
+        20,
+        140,
+        24
+      ],
+      "bytes": 711,
+      "sha256": "6999f60410a990e41cbbd59237ceab30670eabeea1d0c843584d502b66a398cf",
+      "features": 2
+    },
+    {
+      "path": "tiles/136_28.geojson",
+      "bounds": [
+        136,
+        28,
+        140,
+        32
+      ],
+      "bytes": 799,
+      "sha256": "b0e30e15fa4c6ee2abd429f69026f90a3a7374af944a2ca339c74d297360b659",
+      "features": 2
+    },
+    {
+      "path": "tiles/136_32.geojson",
+      "bounds": [
+        136,
+        32,
+        140,
+        36
+      ],
+      "bytes": 766963,
+      "sha256": "298f7cef07e8b95ebb30e825203827df73df841da74a93426d2adbbcd1130f92",
+      "features": 398
+    },
+    {
+      "path": "tiles/136_36.geojson",
+      "bounds": [
+        136,
+        36,
+        140,
+        40
+      ],
+      "bytes": 405681,
+      "sha256": "c23cea8c37b3a95b3df9836dd93f231c20c95d9f298b8cf6c24c05428e70cc38",
+      "features": 160
+    },
+    {
+      "path": "tiles/136_40.geojson",
+      "bounds": [
+        136,
+        40,
+        140,
+        44
+      ],
+      "bytes": 80015,
+      "sha256": "4de867d557e274198b0546d7c960fda35ec74ac71a1ddb4212cbdbc62520d50f",
+      "features": 24
+    },
+    {
+      "path": "tiles/136_44.geojson",
+      "bounds": [
+        136,
+        44,
+        140,
+        48
+      ],
+      "bytes": 158227,
+      "sha256": "0129e67efb95337424ce8c73452d62cb15d13d3aeff8586e47dd3e6b5be1619f",
+      "features": 6
+    },
+    {
+      "path": "tiles/136_48.geojson",
+      "bounds": [
+        136,
+        48,
+        140,
+        52
+      ],
+      "bytes": 153005,
+      "sha256": "8e3474b0cf2e3b1f005abc572993a6257d8aa184abf2fc92f5b6f6915d5cfc56",
+      "features": 50
+    },
+    {
+      "path": "tiles/136_52.geojson",
+      "bounds": [
+        136,
+        52,
+        140,
+        56
+      ],
+      "bytes": 436973,
+      "sha256": "999d03eebd859546209a75cafcbddca8db54a404caf4decdad36e058d64c6698",
+      "features": 88
+    },
+    {
+      "path": "tiles/140_4.geojson",
+      "bounds": [
+        140,
+        4,
+        144,
+        8
+      ],
+      "bytes": 16068,
+      "sha256": "118da817fc7ccaed864c4cbcbb6eb012dafd5168611c81dd47daaef374eac6f1",
+      "features": 44
+    },
+    {
+      "path": "tiles/140_8.geojson",
+      "bounds": [
+        140,
+        8,
+        144,
+        12
+      ],
+      "bytes": 9758,
+      "sha256": "ca86663dbeb838bad1de11d682d72eb71ee114ab5c6ec22142746a35da8469b8",
+      "features": 24
+    },
+    {
+      "path": "tiles/140_24.geojson",
+      "bounds": [
+        140,
+        24,
+        144,
+        28
+      ],
+      "bytes": 79122,
+      "sha256": "f6e84f7975180976979ee15f6252b9f85743c1f5c155c56191d5e2bc31393f8f",
+      "features": 130
+    },
+    {
+      "path": "tiles/140_28.geojson",
+      "bounds": [
+        140,
+        28,
+        144,
+        32
+      ],
+      "bytes": 4345,
+      "sha256": "e690913524c364ab6920c0aa5101ecbee6d174c7c37453ea6438ce074c4ac702",
+      "features": 8
+    },
+    {
+      "path": "tiles/140_32.geojson",
+      "bounds": [
+        140,
+        32,
+        144,
+        36
+      ],
+      "bytes": 92318,
+      "sha256": "d1d61ddfd3a9d2ce48f88a95e63c820db4a3e30a19c47669ae74bc3689dc124a",
+      "features": 64
+    },
+    {
+      "path": "tiles/140_36.geojson",
+      "bounds": [
+        140,
+        36,
+        144,
+        40
+      ],
+      "bytes": 384728,
+      "sha256": "ca778ffe1c5d9b002a28191ccd326775c14dd7c9a52cdc95b9125a7c86b54790",
+      "features": 196
+    },
+    {
+      "path": "tiles/140_40.geojson",
+      "bounds": [
+        140,
+        40,
+        144,
+        44
+      ],
+      "bytes": 547265,
+      "sha256": "351fe0e8b011d40e019917e35cb3cb16c49cbba01f0d3c0d874fffe4657eec01",
+      "features": 46
+    },
+    {
+      "path": "tiles/140_44.geojson",
+      "bounds": [
+        140,
+        44,
+        144,
+        48
+      ],
+      "bytes": 446671,
+      "sha256": "f29352f70900da3afdda3541bffe3f0fb96259f18b0ea7ba6534c1829298a6a1",
+      "features": 28
+    },
+    {
+      "path": "tiles/140_48.geojson",
+      "bounds": [
+        140,
+        48,
+        144,
+        52
+      ],
+      "bytes": 482459,
+      "sha256": "8cc2b1ff4ac96696b898c5b811fd95409757bdda5b6ce0e73f7926fcd2c6b550",
+      "features": 78
+    },
+    {
+      "path": "tiles/140_52.geojson",
+      "bounds": [
+        140,
+        52,
+        144,
+        56
+      ],
+      "bytes": 535816,
+      "sha256": "6a0c591109add9dc711e6f49129c5ed3cdff6a527cdaa8cc58f49b6eef78872f",
+      "features": 142
+    },
+    {
+      "path": "tiles/144_-4.geojson",
+      "bounds": [
+        144,
+        -4,
+        148,
+        0
+      ],
+      "bytes": 5821,
+      "sha256": "ac9b0fc7cc1221c57d87fc7ef7fefead73417982b96d3d5b5b54184bac7c4774",
+      "features": 14
+    },
+    {
+      "path": "tiles/144_4.geojson",
+      "bounds": [
+        144,
+        4,
+        148,
+        8
+      ],
+      "bytes": 13032,
+      "sha256": "5871c6d2416f4d6faec9151991cef3fcc1efb87ad174f0bdec0b31c5d606e82f",
+      "features": 30
+    },
+    {
+      "path": "tiles/144_8.geojson",
+      "bounds": [
+        144,
+        8,
+        148,
+        12
+      ],
+      "bytes": 4367,
+      "sha256": "f0f5a410632c7a594685cac3ddecac3a136ae8917674d82920a6a104edd082d4",
+      "features": 12
+    },
+    {
+      "path": "tiles/144_12.geojson",
+      "bounds": [
+        144,
+        12,
+        148,
+        16
+      ],
+      "bytes": 58856,
+      "sha256": "74a233bbc9bc431e38070e06f5e6a78b04b91e7b92ad9e4a1ee2b47046430e1d",
+      "features": 52
+    },
+    {
+      "path": "tiles/144_16.geojson",
+      "bounds": [
+        144,
+        16,
+        148,
+        20
+      ],
+      "bytes": 28058,
+      "sha256": "dddf1ca50e72ba6724ccc01cd15fc9f651a80c4bb576ae006ca21a9905a0a911",
+      "features": 20
+    },
+    {
+      "path": "tiles/144_20.geojson",
+      "bounds": [
+        144,
+        20,
+        148,
+        24
+      ],
+      "bytes": 3911,
+      "sha256": "553a5dbc55c16ab5d65437fd51483e93f1069c4e418bd89bdc47ba2b52e55a2f",
+      "features": 10
+    },
+    {
+      "path": "tiles/144_40.geojson",
+      "bounds": [
+        144,
+        40,
+        148,
+        44
+      ],
+      "bytes": 349932,
+      "sha256": "5bd98cc6de7414d8624da8d38b0da661125c6a86298695c9c24097b4b80855d2",
+      "features": 114
+    },
+    {
+      "path": "tiles/144_44.geojson",
+      "bounds": [
+        144,
+        44,
+        148,
+        48
+      ],
+      "bytes": 229353,
+      "sha256": "aa57e86e25870c49bfa602f85dd9c228e3d142b2d46e2b57e48d08f749b811fb",
+      "features": 48
+    },
+    {
+      "path": "tiles/144_48.geojson",
+      "bounds": [
+        144,
+        48,
+        148,
+        52
+      ],
+      "bytes": 75574,
+      "sha256": "5294282d60d18e9e173a7a9decd75d6e50cfc50205780dd78548bdb2180bcb1d",
+      "features": 2
+    },
+    {
+      "path": "tiles/148_4.geojson",
+      "bounds": [
+        148,
+        4,
+        152,
+        8
+      ],
+      "bytes": 96098,
+      "sha256": "110e508ad193b769335d4aea04fd04de792b33f8b7d6b4c21b92e2c6b7f75d73",
+      "features": 186
+    },
+    {
+      "path": "tiles/148_8.geojson",
+      "bounds": [
+        148,
+        8,
+        152,
+        12
+      ],
+      "bytes": 25455,
+      "sha256": "d7cc6d75c904213f7c40d1f9c7e1dc80c199b051d235e109ceebd8afdba3dac3",
+      "features": 76
+    },
+    {
+      "path": "tiles/148_44.geojson",
+      "bounds": [
+        148,
+        44,
+        152,
+        48
+      ],
+      "bytes": 233070,
+      "sha256": "da4ccc3b8e731ab251a9c7877605f11c091860a93f4bd0fcd2fdc6ff8727d140",
+      "features": 156
+    },
+    {
+      "path": "tiles/152_0.geojson",
+      "bounds": [
+        152,
+        0,
+        156,
+        4
+      ],
+      "bytes": 25541,
+      "sha256": "ad52f75a2f18e4fef453538ac805c20fbf3eb796db13a81e60ec03f75d873886",
+      "features": 78
+    },
+    {
+      "path": "tiles/152_4.geojson",
+      "bounds": [
+        152,
+        4,
+        156,
+        8
+      ],
+      "bytes": 57274,
+      "sha256": "6598ea1caa8c4136b71472d2e3fb736c872f4385b792c12e79821ab4c0133abb",
+      "features": 164
+    },
+    {
+      "path": "tiles/152_8.geojson",
+      "bounds": [
+        152,
+        8,
+        156,
+        12
+      ],
+      "bytes": 22646,
+      "sha256": "9678f62a3390d0d6c8611139475f5d7c1cc6ce2cf14783e483f10cce91f490ec",
+      "features": 56
+    },
+    {
+      "path": "tiles/152_24.geojson",
+      "bounds": [
+        152,
+        24,
+        156,
+        28
+      ],
+      "bytes": 1361,
+      "sha256": "02dfb076d48419c4e0f9236c38a72190e397a1bf340f9740767d08284933637d",
+      "features": 2
+    },
+    {
+      "path": "tiles/152_44.geojson",
+      "bounds": [
+        152,
+        44,
+        156,
+        48
+      ],
+      "bytes": 60328,
+      "sha256": "278037583627331156cc5c54e4d3e636bd44a46a5c6ac0efffd6dd4a87c17c87",
+      "features": 30
+    },
+    {
+      "path": "tiles/152_48.geojson",
+      "bounds": [
+        152,
+        48,
+        156,
+        52
+      ],
+      "bytes": 173407,
+      "sha256": "2040eb0ae7156291d7856823d854bed5a4c0bc6356389623d9e91644db366ea6",
+      "features": 94
+    },
+    {
+      "path": "tiles/152_52.geojson",
+      "bounds": [
+        152,
+        52,
+        156,
+        56
+      ],
+      "bytes": 31671,
+      "sha256": "1a61f69b0e977d3c4cbf9b801495114ed8c9fb25fde241d064dde6a86399ad25",
+      "features": 2
+    },
+    {
+      "path": "tiles/156_4.geojson",
+      "bounds": [
+        156,
+        4,
+        160,
+        8
+      ],
+      "bytes": 89873,
+      "sha256": "0911062f39b2b5a0f9f7ecb0f6b23777c0be3ac4fe72dcde30bad979f380bde8",
+      "features": 130
+    },
+    {
+      "path": "tiles/156_48.geojson",
+      "bounds": [
+        156,
+        48,
+        160,
+        52
+      ],
+      "bytes": 131347,
+      "sha256": "9bc56a59b6a5b1478816a7a06cadf1f966e9df34512ffd62289dc8ba85092bc8",
+      "features": 120
+    },
+    {
+      "path": "tiles/156_52.geojson",
+      "bounds": [
+        156,
+        52,
+        160,
+        56
+      ],
+      "bytes": 213740,
+      "sha256": "e535a1174b8d27d159bc7ad72c31cc77cbb15c06c7117568743322842052c4f0",
+      "features": 86
+    },
+    {
+      "path": "tiles/160_4.geojson",
+      "bounds": [
+        160,
+        4,
+        164,
+        8
+      ],
+      "bytes": 3730,
+      "sha256": "75f87d4712bfa2aead2ffe6d15a9134ff775ae10be2e23758e66ded5b5607f40",
+      "features": 6
+    },
+    {
+      "path": "tiles/160_8.geojson",
+      "bounds": [
+        160,
+        8,
+        164,
+        12
+      ],
+      "bytes": 12930,
+      "sha256": "fdfe82ed9658361f45cff9d1d92ce069df7bbfe1281514597916b7b9e04a4785",
+      "features": 40
+    },
+    {
+      "path": "tiles/160_52.geojson",
+      "bounds": [
+        160,
+        52,
+        164,
+        56
+      ],
+      "bytes": 33088,
+      "sha256": "7af3886adccf57502ffaab9081a22424a704bdbdf20718742e4a2a5942cdc366",
+      "features": 4
+    }
+  ]
+}
